@@ -1,0 +1,16 @@
+Not$implicitreportssync,Not$filemanageropentintents,Not$inhousechatprotocol,Not$sqlite
+Not$implicitreportssync,Not$filemanageropentintents,Not$inhousechatprotocol,sqlite
+Not$implicitreportssync,Not$filemanageropentintents,inhousechatprotocol,Not$sqlite
+Not$implicitreportssync,Not$filemanageropentintents,inhousechatprotocol,sqlite
+Not$implicitreportssync,filemanageropentintents,Not$openfire,Not$mysql
+Not$implicitreportssync,filemanageropentintents,Not$openfire,mysql
+Not$implicitreportssync,filemanageropentintents,openfire,Not$mysql
+Not$implicitreportssync,filemanageropentintents,openfire,mysql
+implicitreportssync,Not$sqlite,Not$radiotriangulation,Not$openfire
+implicitreportssync,Not$sqlite,Not$radiotriangulation,openfire
+implicitreportssync,Not$sqlite,radiotriangulation,Not$inhousechatprotocol
+implicitreportssync,Not$sqlite,radiotriangulation,inhousechatprotocol
+implicitreportssync,sqlite,Not$droidmotoroal,Not$radiotriangulation
+implicitreportssync,sqlite,Not$droidmotoroal,radiotriangulation
+implicitreportssync,sqlite,droidmotoroal,Not$inhousechatprotocol
+implicitreportssync,sqlite,droidmotoroal,inhousechatprotocol

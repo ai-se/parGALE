@@ -1,0 +1,11 @@
+And(data_storage, user_auth, nttp, cgi, jsp, php)
+              job id: 7067976
+         exit status: 0
+            cpu time: 78s / 6.0h (0 %)
+        elapsed time: 79s / 6.0h (0 %)
+      virtual memory: 429.9M / 2.0G (20 %)
+
+Job completed successfully
+WARNING: Job only used 0% of its requested walltime.
+WARNING: Job only used 0% of its requested cpu time.
+WARNING: Job only used 20% of its requested memory.

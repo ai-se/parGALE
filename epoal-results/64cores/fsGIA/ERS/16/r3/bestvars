@@ -1,0 +1,16 @@
+Not$mysql,Not$openfire,Not$droidmotoroal,Not$implicitreportssync
+Not$mysql,Not$openfire,Not$droidmotoroal,implicitreportssync
+Not$mysql,Not$openfire,droidmotoroal,Not$explicitreportssync
+Not$mysql,Not$openfire,droidmotoroal,explicitreportssync
+Not$mysql,openfire,Not$implicitreportssync,Not$gps
+Not$mysql,openfire,Not$implicitreportssync,gps
+Not$mysql,openfire,implicitreportssync,Not$droidmotoroal
+Not$mysql,openfire,implicitreportssync,droidmotoroal
+mysql,Not$droidmotoroal,Not$gps,Not$implicitreportssync
+mysql,Not$droidmotoroal,Not$gps,implicitreportssync
+mysql,Not$droidmotoroal,gps,Not$inhousechatprotocol
+mysql,Not$droidmotoroal,gps,inhousechatprotocol
+mysql,droidmotoroal,Not$inhousefilemanager,Not$inhousechatprotocol
+mysql,droidmotoroal,Not$inhousefilemanager,inhousechatprotocol
+mysql,droidmotoroal,inhousefilemanager,Not$radiotriangulation
+mysql,droidmotoroal,inhousefilemanager,radiotriangulation

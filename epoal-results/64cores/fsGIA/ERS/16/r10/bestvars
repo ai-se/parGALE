@@ -1,0 +1,16 @@
+Not$nexusonehtc,Not$mysql,Not$implicitreportssync,Not$openfire
+Not$nexusonehtc,Not$mysql,Not$implicitreportssync,openfire
+Not$nexusonehtc,Not$mysql,implicitreportssync,Not$gps
+Not$nexusonehtc,Not$mysql,implicitreportssync,gps
+Not$nexusonehtc,mysql,Not$gps,Not$openfire
+Not$nexusonehtc,mysql,Not$gps,openfire
+Not$nexusonehtc,mysql,gps,Not$inhousechatprotocol
+Not$nexusonehtc,mysql,gps,inhousechatprotocol
+nexusonehtc,Not$implicitreportssync,Not$filemanageropentintents,Not$openfire
+nexusonehtc,Not$implicitreportssync,Not$filemanageropentintents,openfire
+nexusonehtc,Not$implicitreportssync,filemanageropentintents,Not$inhousechatprotocol
+nexusonehtc,Not$implicitreportssync,filemanageropentintents,inhousechatprotocol
+nexusonehtc,implicitreportssync,Not$gps,Not$filemanageropentintents
+nexusonehtc,implicitreportssync,Not$gps,filemanageropentintents
+nexusonehtc,implicitreportssync,gps,Not$mysql
+nexusonehtc,implicitreportssync,gps,mysql

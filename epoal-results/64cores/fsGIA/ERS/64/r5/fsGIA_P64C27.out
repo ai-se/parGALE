@@ -1,0 +1,14 @@
+And(Not(explicitreportssync),
+    gps,
+    nexusonehtc,
+    Not(openfire),
+    mysql,
+    filemanageropentintents)
+              job id: 7066860
+         exit status: 0
+            cpu time: 2s / 600s (0 %)
+        elapsed time: 4s / 600s (0 %)
+
+Job completed successfully
+WARNING: Job only used 0% of its requested walltime.
+WARNING: Job only used 0% of its requested cpu time.

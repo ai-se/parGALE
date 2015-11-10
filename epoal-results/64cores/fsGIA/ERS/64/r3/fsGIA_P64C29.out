@@ -1,0 +1,16 @@
+And(Not(nexusonehtc),
+    inhousefilemanager,
+    openfire,
+    sqlite,
+    Not(explicitreportssync),
+    radiotriangulation)
+              job id: 7066734
+         exit status: 0
+            cpu time: 3s / 600s (0 %)
+        elapsed time: 4s / 600s (0 %)
+      virtual memory: 379.1M / 2.0G (18 %)
+
+Job completed successfully
+WARNING: Job only used 0% of its requested walltime.
+WARNING: Job only used 0% of its requested cpu time.
+WARNING: Job only used 18% of its requested memory.

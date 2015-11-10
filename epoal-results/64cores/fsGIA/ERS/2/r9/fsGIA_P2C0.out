@@ -1,0 +1,11 @@
+And(Not(inhousefilemanager))
+              job id: 7066028
+         exit status: 0
+            cpu time: 35s / 600s (5 %)
+        elapsed time: 37s / 600s (6 %)
+      virtual memory: 429.6M / 2.0G (20 %)
+
+Job completed successfully
+WARNING: Job only used 6% of its requested walltime.
+WARNING: Job only used 5% of its requested cpu time.
+WARNING: Job only used 20% of its requested memory.

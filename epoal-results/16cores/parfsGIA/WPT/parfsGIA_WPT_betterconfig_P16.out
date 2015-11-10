@@ -1,0 +1,120 @@
+Running: ['parallelfeaturesplitGIA.py', 'WPT', 'parfsGIA_WPT_betterconfig_P16', '16', '2']
+[('data_storage', 1.0), ('php', 1.0), ('nttp', 1.0), ('user_auth', 1.0)]
+[data_storage, php, nttp]
+[And(Not(data_storage), Not(php), Not(nttp)), And(Not(data_storage), Not(php), Not(nttp)), And(data_storage, Not(php), Not(nttp)), And(data_storage, Not(php), Not(nttp)), And(Not(data_storage), php, Not(nttp)), And(Not(data_storage), php, Not(nttp)), And(Not(data_storage), Not(php), nttp), And(Not(data_storage), Not(php), nttp), And(data_storage, php, Not(nttp)), And(data_storage, php, Not(nttp)), And(data_storage, Not(php), nttp), And(data_storage, Not(php), nttp), And(Not(data_storage), php, nttp), And(Not(data_storage), php, nttp), And(data_storage, php, nttp), And(data_storage, php, nttp)]
+Running: ['parallelfeaturesplitGIA.py', 'WPT', 'parfsGIA_WPT_betterconfig_P16', '16', '2']
+[('data_storage', 1.0), ('php', 1.0), ('nttp', 1.0), ('user_auth', 1.0)]
+[data_storage, php, nttp]
+[And(Not(data_storage), Not(php), Not(nttp)), And(Not(data_storage), Not(php), Not(nttp)), And(data_storage, Not(php), Not(nttp)), And(data_storage, Not(php), Not(nttp)), And(Not(data_storage), php, Not(nttp)), And(Not(data_storage), php, Not(nttp)), And(Not(data_storage), Not(php), nttp), And(Not(data_storage), Not(php), nttp), And(data_storage, php, Not(nttp)), And(data_storage, php, Not(nttp)), And(data_storage, Not(php), nttp), And(data_storage, Not(php), nttp), And(Not(data_storage), php, nttp), And(Not(data_storage), php, nttp), And(data_storage, php, nttp), And(data_storage, php, nttp)]
+Running: ['parallelfeaturesplitGIA.py', 'WPT', 'parfsGIA_WPT_betterconfig_P16', '16', '2']
+[('data_storage', 1.0), ('php', 1.0), ('nttp', 1.0), ('user_auth', 1.0)]
+[data_storage, php, nttp]
+[And(Not(data_storage), Not(php), Not(nttp)), And(Not(data_storage), Not(php), Not(nttp)), And(data_storage, Not(php), Not(nttp)), And(data_storage, Not(php), Not(nttp)), And(Not(data_storage), php, Not(nttp)), And(Not(data_storage), php, Not(nttp)), And(Not(data_storage), Not(php), nttp), And(Not(data_storage), Not(php), nttp), And(data_storage, php, Not(nttp)), And(data_storage, php, Not(nttp)), And(data_storage, Not(php), nttp), And(data_storage, Not(php), nttp), And(Not(data_storage), php, nttp), And(Not(data_storage), php, nttp), And(data_storage, php, nttp), And(data_storage, php, nttp)]
+              job id: 7047050
+         exit status: 0
+            cpu time: 2.5h / 160.0h (1 %)
+        elapsed time: 807s / 10.0h (2 %)
+      virtual memory: 5.3G / 16.0G (33 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 33% of its requested memory.
+Running: ['parallelfeaturesplitGIA.py', 'WPT', 'parfsGIA_WPT_betterconfig_P16', '16', '2']
+[('data_storage', 1.0), ('php', 1.0), ('nttp', 1.0), ('user_auth', 1.0)]
+[data_storage, php, nttp]
+[And(Not(data_storage), Not(php), Not(nttp)), And(Not(data_storage), Not(php), Not(nttp)), And(data_storage, Not(php), Not(nttp)), And(data_storage, Not(php), Not(nttp)), And(Not(data_storage), php, Not(nttp)), And(Not(data_storage), php, Not(nttp)), And(Not(data_storage), Not(php), nttp), And(Not(data_storage), Not(php), nttp), And(data_storage, php, Not(nttp)), And(data_storage, php, Not(nttp)), And(data_storage, Not(php), nttp), And(data_storage, Not(php), nttp), And(Not(data_storage), php, nttp), And(Not(data_storage), php, nttp), And(data_storage, php, nttp), And(data_storage, php, nttp)]
+              job id: 7047052
+         exit status: 0
+            cpu time: 2.9h / 160.0h (1 %)
+        elapsed time: 841s / 10.0h (2 %)
+      virtual memory: 5.3G / 16.0G (33 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 33% of its requested memory.
+Running: ['parallelfeaturesplitGIA.py', 'WPT', 'parfsGIA_WPT_betterconfig_P16', '16', '2']
+[('data_storage', 1.0), ('php', 1.0), ('nttp', 1.0), ('user_auth', 1.0)]
+[data_storage, php, nttp]
+[And(Not(data_storage), Not(php), Not(nttp)), And(Not(data_storage), Not(php), Not(nttp)), And(data_storage, Not(php), Not(nttp)), And(data_storage, Not(php), Not(nttp)), And(Not(data_storage), php, Not(nttp)), And(Not(data_storage), php, Not(nttp)), And(Not(data_storage), Not(php), nttp), And(Not(data_storage), Not(php), nttp), And(data_storage, php, Not(nttp)), And(data_storage, php, Not(nttp)), And(data_storage, Not(php), nttp), And(data_storage, Not(php), nttp), And(Not(data_storage), php, nttp), And(Not(data_storage), php, nttp), And(data_storage, php, nttp), And(data_storage, php, nttp)]
+              job id: 7047053
+         exit status: 0
+            cpu time: 2.6h / 160.0h (1 %)
+        elapsed time: 709s / 10.0h (1 %)
+      virtual memory: 5.3G / 16.0G (33 %)
+
+Job completed successfully
+WARNING: Job only used 1% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 33% of its requested memory.
+Running: ['parallelfeaturesplitGIA.py', 'WPT', 'parfsGIA_WPT_betterconfig_P16', '16', '2']
+[('data_storage', 1.0), ('php', 1.0), ('nttp', 1.0), ('user_auth', 1.0)]
+[data_storage, php, nttp]
+[And(Not(data_storage), Not(php), Not(nttp)), And(Not(data_storage), Not(php), Not(nttp)), And(data_storage, Not(php), Not(nttp)), And(data_storage, Not(php), Not(nttp)), And(Not(data_storage), php, Not(nttp)), And(Not(data_storage), php, Not(nttp)), And(Not(data_storage), Not(php), nttp), And(Not(data_storage), Not(php), nttp), And(data_storage, php, Not(nttp)), And(data_storage, php, Not(nttp)), And(data_storage, Not(php), nttp), And(data_storage, Not(php), nttp), And(Not(data_storage), php, nttp), And(Not(data_storage), php, nttp), And(data_storage, php, nttp), And(data_storage, php, nttp)]
+              job id: 7047054
+         exit status: 0
+            cpu time: 2.5h / 160.0h (1 %)
+        elapsed time: 769s / 10.0h (2 %)
+      virtual memory: 5.3G / 16.0G (33 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 33% of its requested memory.
+Running: ['parallelfeaturesplitGIA.py', 'WPT', 'parfsGIA_WPT_betterconfig_P16', '16', '2']
+[('data_storage', 1.0), ('php', 1.0), ('nttp', 1.0), ('user_auth', 1.0)]
+[data_storage, php, nttp]
+[And(Not(data_storage), Not(php), Not(nttp)), And(Not(data_storage), Not(php), Not(nttp)), And(data_storage, Not(php), Not(nttp)), And(data_storage, Not(php), Not(nttp)), And(Not(data_storage), php, Not(nttp)), And(Not(data_storage), php, Not(nttp)), And(Not(data_storage), Not(php), nttp), And(Not(data_storage), Not(php), nttp), And(data_storage, php, Not(nttp)), And(data_storage, php, Not(nttp)), And(data_storage, Not(php), nttp), And(data_storage, Not(php), nttp), And(Not(data_storage), php, nttp), And(Not(data_storage), php, nttp), And(data_storage, php, nttp), And(data_storage, php, nttp)]
+Running: ['parallelfeaturesplitGIA.py', 'WPT', 'parfsGIA_WPT_betterconfig_P16', '16', '2']
+[('data_storage', 1.0), ('php', 1.0), ('nttp', 1.0), ('user_auth', 1.0)]
+[data_storage, php, nttp]
+[And(Not(data_storage), Not(php), Not(nttp)), And(Not(data_storage), Not(php), Not(nttp)), And(data_storage, Not(php), Not(nttp)), And(data_storage, Not(php), Not(nttp)), And(Not(data_storage), php, Not(nttp)), And(Not(data_storage), php, Not(nttp)), And(Not(data_storage), Not(php), nttp), And(Not(data_storage), Not(php), nttp), And(data_storage, php, Not(nttp)), And(data_storage, php, Not(nttp)), And(data_storage, Not(php), nttp), And(data_storage, Not(php), nttp), And(Not(data_storage), php, nttp), And(Not(data_storage), php, nttp), And(data_storage, php, nttp), And(data_storage, php, nttp)]
+              job id: 7047056
+         exit status: 0
+            cpu time: 2.7h / 160.0h (1 %)
+        elapsed time: 855s / 10.0h (2 %)
+      virtual memory: 5.3G / 16.0G (33 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 33% of its requested memory.
+              job id: 7047057
+         exit status: 0
+            cpu time: 2.8h / 160.0h (1 %)
+        elapsed time: 812s / 10.0h (2 %)
+      virtual memory: 5.3G / 16.0G (33 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 33% of its requested memory.
+Running: ['parallelfeaturesplitGIA.py', 'WPT', 'parfsGIA_WPT_betterconfig_P16', '16', '2']
+[('data_storage', 1.0), ('php', 1.0), ('nttp', 1.0), ('user_auth', 1.0)]
+[data_storage, php, nttp]
+[And(Not(data_storage), Not(php), Not(nttp)), And(Not(data_storage), Not(php), Not(nttp)), And(data_storage, Not(php), Not(nttp)), And(data_storage, Not(php), Not(nttp)), And(Not(data_storage), php, Not(nttp)), And(Not(data_storage), php, Not(nttp)), And(Not(data_storage), Not(php), nttp), And(Not(data_storage), Not(php), nttp), And(data_storage, php, Not(nttp)), And(data_storage, php, Not(nttp)), And(data_storage, Not(php), nttp), And(data_storage, Not(php), nttp), And(Not(data_storage), php, nttp), And(Not(data_storage), php, nttp), And(data_storage, php, nttp), And(data_storage, php, nttp)]
+Running: ['parallelfeaturesplitGIA.py', 'WPT', 'parfsGIA_WPT_betterconfig_P16', '16', '2']
+[('data_storage', 1.0), ('php', 1.0), ('nttp', 1.0), ('user_auth', 1.0)]
+[data_storage, php, nttp]
+[And(Not(data_storage), Not(php), Not(nttp)), And(Not(data_storage), Not(php), Not(nttp)), And(data_storage, Not(php), Not(nttp)), And(data_storage, Not(php), Not(nttp)), And(Not(data_storage), php, Not(nttp)), And(Not(data_storage), php, Not(nttp)), And(Not(data_storage), Not(php), nttp), And(Not(data_storage), Not(php), nttp), And(data_storage, php, Not(nttp)), And(data_storage, php, Not(nttp)), And(data_storage, Not(php), nttp), And(data_storage, Not(php), nttp), And(Not(data_storage), php, nttp), And(Not(data_storage), php, nttp), And(data_storage, php, nttp), And(data_storage, php, nttp)]
+              job id: 7047058
+         exit status: 0
+            cpu time: 2.6h / 160.0h (1 %)
+        elapsed time: 884s / 10.0h (2 %)
+      virtual memory: 5.3G / 16.0G (33 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 33% of its requested memory.
+              job id: 7047059
+         exit status: 0
+            cpu time: 2.6h / 160.0h (1 %)
+        elapsed time: 733s / 10.0h (2 %)
+      virtual memory: 5.3G / 16.0G (33 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 33% of its requested memory.

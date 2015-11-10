@@ -1,0 +1,11 @@
+And(Not(implicitreportssync), Not(sqlite))
+              job id: 7066056
+         exit status: 0
+            cpu time: 13s / 600s (2 %)
+        elapsed time: 17s / 600s (2 %)
+      virtual memory: 428.8M / 2.0G (20 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 2% of its requested cpu time.
+WARNING: Job only used 20% of its requested memory.

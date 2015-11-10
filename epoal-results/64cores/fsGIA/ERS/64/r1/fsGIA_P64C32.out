@@ -1,0 +1,28 @@
+And(implicitreportssync,
+    Not(inhousefilemanager),
+    Not(sqlite),
+    Not(radiotriangulation),
+    Not(nexusonehtc),
+    Not(inhousechatprotocol))
+              job id: 7066504
+         exit status: 0
+            cpu time: 3s / 600s (0 %)
+        elapsed time: 4s / 600s (0 %)
+
+Job completed successfully
+WARNING: Job only used 0% of its requested walltime.
+WARNING: Job only used 0% of its requested cpu time.
+And(implicitreportssync,
+    Not(inhousefilemanager),
+    Not(sqlite),
+    Not(radiotriangulation),
+    Not(nexusonehtc),
+    Not(inhousechatprotocol))
+              job id: 7066609
+         exit status: 0
+            cpu time: 3s / 600s (0 %)
+        elapsed time: 5s / 600s (0 %)
+
+Job completed successfully
+WARNING: Job only used 0% of its requested walltime.
+WARNING: Job only used 0% of its requested cpu time.

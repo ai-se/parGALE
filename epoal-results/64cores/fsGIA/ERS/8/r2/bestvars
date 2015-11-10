@@ -1,0 +1,8 @@
+Not$radiotriangulation,Not$sqlite,Not$inhousechatprotocol
+Not$radiotriangulation,Not$sqlite,inhousechatprotocol
+Not$radiotriangulation,sqlite,Not$implicitreportssync
+Not$radiotriangulation,sqlite,implicitreportssync
+radiotriangulation,Not$inhousefilemanager,Not$openfire
+radiotriangulation,Not$inhousefilemanager,openfire
+radiotriangulation,inhousefilemanager,Not$mysql
+radiotriangulation,inhousefilemanager,mysql

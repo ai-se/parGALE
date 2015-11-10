@@ -1,0 +1,16 @@
+Not$openfire,Not$sqlite,Not$explicitreportssync,Not$filemanageropentintents
+Not$openfire,Not$sqlite,Not$explicitreportssync,filemanageropentintents
+Not$openfire,Not$sqlite,explicitreportssync,Not$filemanageropentintents
+Not$openfire,Not$sqlite,explicitreportssync,filemanageropentintents
+Not$openfire,sqlite,Not$radiotriangulation,Not$implicitreportssync
+Not$openfire,sqlite,Not$radiotriangulation,implicitreportssync
+Not$openfire,sqlite,radiotriangulation,Not$inhousefilemanager
+Not$openfire,sqlite,radiotriangulation,inhousefilemanager
+openfire,Not$mysql,Not$filemanageropentintents,Not$radiotriangulation
+openfire,Not$mysql,Not$filemanageropentintents,radiotriangulation
+openfire,Not$mysql,filemanageropentintents,Not$nexusonehtc
+openfire,Not$mysql,filemanageropentintents,nexusonehtc
+openfire,mysql,Not$implicitreportssync,Not$filemanageropentintents
+openfire,mysql,Not$implicitreportssync,filemanageropentintents
+openfire,mysql,implicitreportssync,Not$filemanageropentintents
+openfire,mysql,implicitreportssync,filemanageropentintents

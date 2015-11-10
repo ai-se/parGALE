@@ -1,0 +1,13 @@
+And(Not(implicitreportssync),
+    Not(nexusonehtc),
+    Not(radiotriangulation),
+    Not(filemanageropentintents),
+    mysql)
+              job id: 7066345
+         exit status: 0
+            cpu time: 4s / 600s (0 %)
+        elapsed time: 13s / 600s (2 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 0% of its requested cpu time.

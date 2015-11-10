@@ -1,0 +1,9 @@
+And(Not(gps), Not(openfire))
+              job id: 7066060
+         exit status: 0
+            cpu time: 17s / 600s (2 %)
+        elapsed time: 23s / 600s (3 %)
+
+Job completed successfully
+WARNING: Job only used 3% of its requested walltime.
+WARNING: Job only used 2% of its requested cpu time.

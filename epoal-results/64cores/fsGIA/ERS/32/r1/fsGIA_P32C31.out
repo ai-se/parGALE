@@ -1,0 +1,13 @@
+And(inhousechatprotocol,
+    mysql,
+    radiotriangulation,
+    filemanageropentintents,
+    nexusonehtc)
+              job id: 7066343
+         exit status: 0
+            cpu time: 5s / 600s (0 %)
+        elapsed time: 9s / 600s (1 %)
+
+Job completed successfully
+WARNING: Job only used 1% of its requested walltime.
+WARNING: Job only used 0% of its requested cpu time.

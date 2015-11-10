@@ -1,0 +1,15 @@
+And(Not(gps),
+    Not(inhousefilemanager),
+    Not(sqlite),
+    Not(openfire),
+    Not(implicitreportssync))
+              job id: 7066376
+         exit status: 0
+            cpu time: 4s / 600s (0 %)
+        elapsed time: 6s / 600s (1 %)
+      virtual memory: 107.7M / 2.0G (5 %)
+
+Job completed successfully
+WARNING: Job only used 1% of its requested walltime.
+WARNING: Job only used 0% of its requested cpu time.
+WARNING: Job only used 5% of its requested memory.

@@ -1,0 +1,11 @@
+And(Not(nttp), data_storage, Not(user_auth), cgi, php, asp)
+              job id: 7068064
+         exit status: 0
+            cpu time: 106s / 6.0h (0 %)
+        elapsed time: 108s / 6.0h (0 %)
+      virtual memory: 431.7M / 2.0G (21 %)
+
+Job completed successfully
+WARNING: Job only used 0% of its requested walltime.
+WARNING: Job only used 0% of its requested cpu time.
+WARNING: Job only used 21% of its requested memory.

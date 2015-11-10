@@ -1,0 +1,11 @@
+And(Not(mysql), Not(nexusonehtc))
+              job id: 7066032
+         exit status: 0
+            cpu time: 18s / 600s (3 %)
+        elapsed time: 23s / 600s (3 %)
+      virtual memory: 429.1M / 2.0G (20 %)
+
+Job completed successfully
+WARNING: Job only used 3% of its requested walltime.
+WARNING: Job only used 3% of its requested cpu time.
+WARNING: Job only used 20% of its requested memory.

@@ -1,0 +1,8 @@
+Not$openfire,Not$filemanageropentintents,Not$gps
+Not$openfire,Not$filemanageropentintents,gps
+Not$openfire,filemanageropentintents,Not$gps
+Not$openfire,filemanageropentintents,gps
+openfire,Not$mysql,Not$inhousefilemanager
+openfire,Not$mysql,inhousefilemanager
+openfire,mysql,Not$nexusonehtc
+openfire,mysql,nexusonehtc

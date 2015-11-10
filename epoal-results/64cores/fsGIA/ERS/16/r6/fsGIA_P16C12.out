@@ -1,0 +1,14 @@
+And(sqlite,
+    radiotriangulation,
+    Not(openfire),
+    Not(inhousefilemanager))
+              job id: 7066244
+         exit status: 0
+            cpu time: 6s / 600s (1 %)
+        elapsed time: 8s / 600s (1 %)
+      virtual memory: 428.9M / 2.0G (20 %)
+
+Job completed successfully
+WARNING: Job only used 1% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 20% of its requested memory.

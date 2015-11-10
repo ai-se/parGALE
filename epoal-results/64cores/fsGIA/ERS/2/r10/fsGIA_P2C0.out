@@ -1,0 +1,9 @@
+And(Not(sqlite))
+              job id: 7066030
+         exit status: 0
+            cpu time: 27s / 600s (4 %)
+        elapsed time: 28s / 600s (4 %)
+
+Job completed successfully
+WARNING: Job only used 4% of its requested walltime.
+WARNING: Job only used 4% of its requested cpu time.

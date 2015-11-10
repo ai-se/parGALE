@@ -1,0 +1,9 @@
+And(Not(inhousefilemanager), Not(mysql))
+              job id: 7066064
+         exit status: 0
+            cpu time: 15s / 600s (2 %)
+        elapsed time: 16s / 600s (2 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 2% of its requested cpu time.

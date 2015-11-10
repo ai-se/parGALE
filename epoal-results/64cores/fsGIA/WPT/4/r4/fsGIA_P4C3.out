@@ -1,0 +1,11 @@
+And(data_storage, user_auth)
+              job id: 7067564
+         exit status: 0
+            cpu time: 1270s / 6.0h (5 %)
+        elapsed time: 1273s / 6.0h (5 %)
+      virtual memory: 450.1M / 2.0G (21 %)
+
+Job completed successfully
+WARNING: Job only used 5% of its requested walltime.
+WARNING: Job only used 5% of its requested cpu time.
+WARNING: Job only used 21% of its requested memory.

@@ -1,0 +1,11 @@
+And(droidmotoroal)
+              job id: 7066013
+         exit status: 0
+            cpu time: 37s / 600s (6 %)
+        elapsed time: 42s / 600s (7 %)
+      virtual memory: 429.7M / 2.0G (20 %)
+
+Job completed successfully
+WARNING: Job only used 7% of its requested walltime.
+WARNING: Job only used 6% of its requested cpu time.
+WARNING: Job only used 20% of its requested memory.

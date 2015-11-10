@@ -1,0 +1,12 @@
+And(inhousefilemanager,
+    Not(sqlite),
+    Not(inhousechatprotocol),
+    gps)
+              job id: 7066289
+         exit status: 0
+            cpu time: 6s / 600s (1 %)
+        elapsed time: 8s / 600s (1 %)
+
+Job completed successfully
+WARNING: Job only used 1% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.

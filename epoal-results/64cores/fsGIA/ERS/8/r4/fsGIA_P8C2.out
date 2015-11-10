@@ -1,0 +1,13 @@
+And(Not(radiotriangulation),
+    mysql,
+    Not(inhousechatprotocol))
+              job id: 7066098
+         exit status: 0
+            cpu time: 10s / 600s (1 %)
+        elapsed time: 11s / 600s (1 %)
+      virtual memory: 339.5M / 2.0G (16 %)
+
+Job completed successfully
+WARNING: Job only used 1% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 16% of its requested memory.

@@ -1,0 +1,11 @@
+And(user_auth, Not(nttp), data_storage, asp)
+              job id: 7067636
+         exit status: 0
+            cpu time: 501s / 6.0h (2 %)
+        elapsed time: 503s / 6.0h (2 %)
+      virtual memory: 438.6M / 2.0G (21 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 2% of its requested cpu time.
+WARNING: Job only used 21% of its requested memory.

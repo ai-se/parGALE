@@ -1,0 +1,28 @@
+And(implicitreportssync,
+    inhousefilemanager,
+    Not(sqlite),
+    Not(droidmotoroal),
+    inhousechatprotocol,
+    Not(radiotriangulation))
+              job id: 7066522
+         exit status: 0
+            cpu time: 3s / 600s (0 %)
+        elapsed time: 5s / 600s (0 %)
+
+Job completed successfully
+WARNING: Job only used 0% of its requested walltime.
+WARNING: Job only used 0% of its requested cpu time.
+And(implicitreportssync,
+    inhousefilemanager,
+    Not(sqlite),
+    Not(droidmotoroal),
+    inhousechatprotocol,
+    Not(radiotriangulation))
+              job id: 7066627
+         exit status: 0
+            cpu time: 3s / 600s (0 %)
+        elapsed time: 5s / 600s (0 %)
+
+Job completed successfully
+WARNING: Job only used 0% of its requested walltime.
+WARNING: Job only used 0% of its requested cpu time.

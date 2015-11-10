@@ -1,0 +1,8 @@
+Not$user_auth,Not$data_storage,Not$nttp
+Not$user_auth,Not$data_storage,nttp
+Not$user_auth,data_storage,Not$nttp
+Not$user_auth,data_storage,nttp
+user_auth,Not$nttp,Not$data_storage
+user_auth,Not$nttp,data_storage
+user_auth,nttp,Not$data_storage
+user_auth,nttp,data_storage

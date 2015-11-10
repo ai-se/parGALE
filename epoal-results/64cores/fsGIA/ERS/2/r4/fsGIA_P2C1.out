@@ -1,0 +1,11 @@
+And(gps)
+              job id: 7066019
+         exit status: 0
+            cpu time: 30s / 600s (5 %)
+        elapsed time: 32s / 600s (5 %)
+      virtual memory: 231.2M / 2.0G (11 %)
+
+Job completed successfully
+WARNING: Job only used 5% of its requested walltime.
+WARNING: Job only used 5% of its requested cpu time.
+WARNING: Job only used 11% of its requested memory.

@@ -1,0 +1,30 @@
+And(Not(nexusonehtc),
+    inhousefilemanager,
+    Not(openfire),
+    gps,
+    Not(sqlite),
+    Not(explicitreportssync))
+              job id: 7066556
+         exit status: 0
+            cpu time: 3s / 600s (0 %)
+        elapsed time: 6s / 600s (1 %)
+
+Job completed successfully
+WARNING: Job only used 1% of its requested walltime.
+WARNING: Job only used 0% of its requested cpu time.
+And(Not(nexusonehtc),
+    inhousefilemanager,
+    Not(openfire),
+    gps,
+    Not(sqlite),
+    Not(explicitreportssync))
+              job id: 7066661
+         exit status: 0
+            cpu time: 3s / 600s (0 %)
+        elapsed time: 7s / 600s (1 %)
+      virtual memory: 428.9M / 2.0G (20 %)
+
+Job completed successfully
+WARNING: Job only used 1% of its requested walltime.
+WARNING: Job only used 0% of its requested cpu time.
+WARNING: Job only used 20% of its requested memory.

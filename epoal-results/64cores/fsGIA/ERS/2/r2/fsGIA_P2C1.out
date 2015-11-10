@@ -1,0 +1,11 @@
+And(sqlite)
+              job id: 7066015
+         exit status: 0
+            cpu time: 31s / 600s (5 %)
+        elapsed time: 33s / 600s (5 %)
+      virtual memory: 428.8M / 2.0G (20 %)
+
+Job completed successfully
+WARNING: Job only used 5% of its requested walltime.
+WARNING: Job only used 5% of its requested cpu time.
+WARNING: Job only used 20% of its requested memory.

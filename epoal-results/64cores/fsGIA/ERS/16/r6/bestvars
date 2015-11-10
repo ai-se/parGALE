@@ -1,0 +1,16 @@
+Not$sqlite,Not$inhousefilemanager,Not$inhousechatprotocol,Not$explicitreportssync
+Not$sqlite,Not$inhousefilemanager,Not$inhousechatprotocol,explicitreportssync
+Not$sqlite,Not$inhousefilemanager,inhousechatprotocol,Not$implicitreportssync
+Not$sqlite,Not$inhousefilemanager,inhousechatprotocol,implicitreportssync
+Not$sqlite,inhousefilemanager,Not$implicitreportssync,Not$openfire
+Not$sqlite,inhousefilemanager,Not$implicitreportssync,openfire
+Not$sqlite,inhousefilemanager,implicitreportssync,Not$gps
+Not$sqlite,inhousefilemanager,implicitreportssync,gps
+sqlite,Not$radiotriangulation,Not$inhousechatprotocol,Not$nexusonehtc
+sqlite,Not$radiotriangulation,Not$inhousechatprotocol,nexusonehtc
+sqlite,Not$radiotriangulation,inhousechatprotocol,Not$explicitreportssync
+sqlite,Not$radiotriangulation,inhousechatprotocol,explicitreportssync
+sqlite,radiotriangulation,Not$openfire,Not$inhousefilemanager
+sqlite,radiotriangulation,Not$openfire,inhousefilemanager
+sqlite,radiotriangulation,openfire,Not$inhousefilemanager
+sqlite,radiotriangulation,openfire,inhousefilemanager

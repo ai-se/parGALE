@@ -1,0 +1,13 @@
+And(filemanageropentintents,
+    Not(radiotriangulation),
+    inhousechatprotocol)
+              job id: 7066141
+         exit status: 0
+            cpu time: 12s / 600s (2 %)
+        elapsed time: 14s / 600s (2 %)
+      virtual memory: 428.8M / 2.0G (20 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 2% of its requested cpu time.
+WARNING: Job only used 20% of its requested memory.

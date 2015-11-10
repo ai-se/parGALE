@@ -1,0 +1,12 @@
+And(Not(radiotriangulation),
+    Not(implicitreportssync),
+    Not(openfire),
+    inhousefilemanager)
+              job id: 7066217
+         exit status: 0
+            cpu time: 6s / 600s (1 %)
+        elapsed time: 7s / 600s (1 %)
+
+Job completed successfully
+WARNING: Job only used 1% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.

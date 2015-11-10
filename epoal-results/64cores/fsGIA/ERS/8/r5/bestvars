@@ -1,0 +1,8 @@
+Not$filemanageropentintents,Not$gps,Not$implicitreportssync
+Not$filemanageropentintents,Not$gps,implicitreportssync
+Not$filemanageropentintents,gps,Not$explicitreportssync
+Not$filemanageropentintents,gps,explicitreportssync
+filemanageropentintents,Not$mysql,Not$nexusonehtc
+filemanageropentintents,Not$mysql,nexusonehtc
+filemanageropentintents,mysql,Not$explicitreportssync
+filemanageropentintents,mysql,explicitreportssync

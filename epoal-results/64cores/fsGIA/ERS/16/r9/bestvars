@@ -1,0 +1,16 @@
+Not$inhousefilemanager,Not$inhousechatprotocol,Not$droidmotoroal,Not$gps
+Not$inhousefilemanager,Not$inhousechatprotocol,Not$droidmotoroal,gps
+Not$inhousefilemanager,Not$inhousechatprotocol,droidmotoroal,Not$gps
+Not$inhousefilemanager,Not$inhousechatprotocol,droidmotoroal,gps
+Not$inhousefilemanager,inhousechatprotocol,Not$radiotriangulation,Not$sqlite
+Not$inhousefilemanager,inhousechatprotocol,Not$radiotriangulation,sqlite
+Not$inhousefilemanager,inhousechatprotocol,radiotriangulation,Not$implicitreportssync
+Not$inhousefilemanager,inhousechatprotocol,radiotriangulation,implicitreportssync
+inhousefilemanager,Not$sqlite,Not$inhousechatprotocol,Not$gps
+inhousefilemanager,Not$sqlite,Not$inhousechatprotocol,gps
+inhousefilemanager,Not$sqlite,inhousechatprotocol,Not$implicitreportssync
+inhousefilemanager,Not$sqlite,inhousechatprotocol,implicitreportssync
+inhousefilemanager,sqlite,Not$openfire,Not$nexusonehtc
+inhousefilemanager,sqlite,Not$openfire,nexusonehtc
+inhousefilemanager,sqlite,openfire,Not$nexusonehtc
+inhousefilemanager,sqlite,openfire,nexusonehtc

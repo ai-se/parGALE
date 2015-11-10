@@ -1,0 +1,14 @@
+And(Not(nexusonehtc),
+    inhousefilemanager,
+    openfire,
+    Not(sqlite),
+    Not(gps),
+    Not(explicitreportssync))
+              job id: 7066729
+         exit status: 0
+            cpu time: 2s / 600s (0 %)
+        elapsed time: 6s / 600s (1 %)
+
+Job completed successfully
+WARNING: Job only used 1% of its requested walltime.
+WARNING: Job only used 0% of its requested cpu time.

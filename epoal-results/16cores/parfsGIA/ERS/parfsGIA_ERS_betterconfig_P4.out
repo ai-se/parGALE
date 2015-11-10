@@ -1,0 +1,140 @@
+Running: ['parallelfeaturesplitGIA.py', 'ERS', 'parfsGIA_ERS_betterconfig_P4', '4', '2']
+[('droidmotoroal', 1.0), ('gps', 0.9111111111111111), ('mysql', 0.8333333333333334), ('implicitreportssync', 0.8), ('sqlite', 0.7777777777777778), ('filemanageropentintents', 0.6923076923076923), ('inhousefilemanager', 0.6153846153846154), ('radiotriangulation', 0.6153846153846154), ('openfire', 0.5), ('inhousechatprotocol', 0.3076923076923077), ('explicitreportssync', 0.30000000000000004)]
+[droidmotoroal]
+[And(Not(droidmotoroal)), And(Not(droidmotoroal)), And(droidmotoroal), And(droidmotoroal)]
+              job id: 7047224
+         exit status: 0
+            cpu time: 121s / 2.0h (1 %)
+        elapsed time: 37s / 1800s (2 %)
+      virtual memory: 1.9G / 4.0G (47 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 47% of its requested memory.
+Running: ['parallelfeaturesplitGIA.py', 'ERS', 'parfsGIA_ERS_betterconfig_P4', '4', '2']
+[('droidmotoroal', 1.0), ('gps', 0.9111111111111111), ('mysql', 0.8333333333333334), ('implicitreportssync', 0.8), ('sqlite', 0.7777777777777778), ('filemanageropentintents', 0.6923076923076923), ('inhousefilemanager', 0.6153846153846154), ('radiotriangulation', 0.6153846153846154), ('openfire', 0.5), ('inhousechatprotocol', 0.3076923076923077), ('explicitreportssync', 0.30000000000000004)]
+[droidmotoroal]
+[And(Not(droidmotoroal)), And(Not(droidmotoroal)), And(droidmotoroal), And(droidmotoroal)]
+              job id: 7047225
+         exit status: 0
+            cpu time: 105s / 2.0h (1 %)
+        elapsed time: 29s / 1800s (1 %)
+      virtual memory: 1.9G / 4.0G (47 %)
+
+Job completed successfully
+WARNING: Job only used 1% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 47% of its requested memory.
+Running: ['parallelfeaturesplitGIA.py', 'ERS', 'parfsGIA_ERS_betterconfig_P4', '4', '2']
+[('droidmotoroal', 1.0), ('gps', 0.9111111111111111), ('mysql', 0.8333333333333334), ('implicitreportssync', 0.8), ('sqlite', 0.7777777777777778), ('filemanageropentintents', 0.6923076923076923), ('inhousefilemanager', 0.6153846153846154), ('radiotriangulation', 0.6153846153846154), ('openfire', 0.5), ('inhousechatprotocol', 0.3076923076923077), ('explicitreportssync', 0.30000000000000004)]
+[droidmotoroal]
+[And(Not(droidmotoroal)), And(Not(droidmotoroal)), And(droidmotoroal), And(droidmotoroal)]
+              job id: 7047226
+         exit status: 0
+            cpu time: 141s / 2.0h (1 %)
+        elapsed time: 45s / 1800s (2 %)
+      virtual memory: 1.9G / 4.0G (47 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 47% of its requested memory.
+Running: ['parallelfeaturesplitGIA.py', 'ERS', 'parfsGIA_ERS_betterconfig_P4', '4', '2']
+[('droidmotoroal', 1.0), ('gps', 0.9111111111111111), ('mysql', 0.8333333333333334), ('implicitreportssync', 0.8), ('sqlite', 0.7777777777777778), ('filemanageropentintents', 0.6923076923076923), ('inhousefilemanager', 0.6153846153846154), ('radiotriangulation', 0.6153846153846154), ('openfire', 0.5), ('inhousechatprotocol', 0.3076923076923077), ('explicitreportssync', 0.30000000000000004)]
+[droidmotoroal]
+[And(Not(droidmotoroal)), And(Not(droidmotoroal)), And(droidmotoroal), And(droidmotoroal)]
+              job id: 7047227
+         exit status: 0
+            cpu time: 105s / 2.0h (1 %)
+        elapsed time: 30s / 1800s (1 %)
+      virtual memory: 1.8G / 4.0G (45 %)
+
+Job completed successfully
+WARNING: Job only used 1% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 45% of its requested memory.
+Running: ['parallelfeaturesplitGIA.py', 'ERS', 'parfsGIA_ERS_betterconfig_P4', '4', '2']
+[('droidmotoroal', 1.0), ('gps', 0.9111111111111111), ('mysql', 0.8333333333333334), ('implicitreportssync', 0.8), ('sqlite', 0.7777777777777778), ('filemanageropentintents', 0.6923076923076923), ('inhousefilemanager', 0.6153846153846154), ('radiotriangulation', 0.6153846153846154), ('openfire', 0.5), ('inhousechatprotocol', 0.3076923076923077), ('explicitreportssync', 0.30000000000000004)]
+[droidmotoroal]
+[And(Not(droidmotoroal)), And(Not(droidmotoroal)), And(droidmotoroal), And(droidmotoroal)]
+              job id: 7047228
+         exit status: 0
+            cpu time: 111s / 2.0h (1 %)
+        elapsed time: 31s / 1800s (1 %)
+      virtual memory: 1.9G / 4.0G (47 %)
+
+Job completed successfully
+WARNING: Job only used 1% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 47% of its requested memory.
+Running: ['parallelfeaturesplitGIA.py', 'ERS', 'parfsGIA_ERS_betterconfig_P4', '4', '2']
+[('droidmotoroal', 1.0), ('gps', 0.9111111111111111), ('mysql', 0.8333333333333334), ('implicitreportssync', 0.8), ('sqlite', 0.7777777777777778), ('filemanageropentintents', 0.6923076923076923), ('inhousefilemanager', 0.6153846153846154), ('radiotriangulation', 0.6153846153846154), ('openfire', 0.5), ('inhousechatprotocol', 0.3076923076923077), ('explicitreportssync', 0.30000000000000004)]
+[droidmotoroal]
+[And(Not(droidmotoroal)), And(Not(droidmotoroal)), And(droidmotoroal), And(droidmotoroal)]
+              job id: 7047229
+         exit status: 0
+            cpu time: 120s / 2.0h (1 %)
+        elapsed time: 36s / 1800s (2 %)
+      virtual memory: 1.8G / 4.0G (45 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 45% of its requested memory.
+Running: ['parallelfeaturesplitGIA.py', 'ERS', 'parfsGIA_ERS_betterconfig_P4', '4', '2']
+[('droidmotoroal', 1.0), ('gps', 0.9111111111111111), ('mysql', 0.8333333333333334), ('implicitreportssync', 0.8), ('sqlite', 0.7777777777777778), ('filemanageropentintents', 0.6923076923076923), ('inhousefilemanager', 0.6153846153846154), ('radiotriangulation', 0.6153846153846154), ('openfire', 0.5), ('inhousechatprotocol', 0.3076923076923077), ('explicitreportssync', 0.30000000000000004)]
+[droidmotoroal]
+[And(Not(droidmotoroal)), And(Not(droidmotoroal)), And(droidmotoroal), And(droidmotoroal)]
+              job id: 7047230
+         exit status: 0
+            cpu time: 108s / 2.0h (1 %)
+        elapsed time: 31s / 1800s (1 %)
+      virtual memory: 1.9G / 4.0G (47 %)
+
+Job completed successfully
+WARNING: Job only used 1% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 47% of its requested memory.
+Running: ['parallelfeaturesplitGIA.py', 'ERS', 'parfsGIA_ERS_betterconfig_P4', '4', '2']
+[('droidmotoroal', 1.0), ('gps', 0.9111111111111111), ('mysql', 0.8333333333333334), ('implicitreportssync', 0.8), ('sqlite', 0.7777777777777778), ('filemanageropentintents', 0.6923076923076923), ('inhousefilemanager', 0.6153846153846154), ('radiotriangulation', 0.6153846153846154), ('openfire', 0.5), ('inhousechatprotocol', 0.3076923076923077), ('explicitreportssync', 0.30000000000000004)]
+[droidmotoroal]
+[And(Not(droidmotoroal)), And(Not(droidmotoroal)), And(droidmotoroal), And(droidmotoroal)]
+              job id: 7047231
+         exit status: 0
+            cpu time: 122s / 2.0h (1 %)
+        elapsed time: 37s / 1800s (2 %)
+      virtual memory: 1.9G / 4.0G (47 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 47% of its requested memory.
+Running: ['parallelfeaturesplitGIA.py', 'ERS', 'parfsGIA_ERS_betterconfig_P4', '4', '2']
+[('droidmotoroal', 1.0), ('gps', 0.9111111111111111), ('mysql', 0.8333333333333334), ('implicitreportssync', 0.8), ('sqlite', 0.7777777777777778), ('filemanageropentintents', 0.6923076923076923), ('inhousefilemanager', 0.6153846153846154), ('radiotriangulation', 0.6153846153846154), ('openfire', 0.5), ('inhousechatprotocol', 0.3076923076923077), ('explicitreportssync', 0.30000000000000004)]
+[droidmotoroal]
+[And(Not(droidmotoroal)), And(Not(droidmotoroal)), And(droidmotoroal), And(droidmotoroal)]
+              job id: 7047232
+         exit status: 0
+            cpu time: 107s / 2.0h (1 %)
+        elapsed time: 29s / 1800s (1 %)
+      virtual memory: 1.9G / 4.0G (47 %)
+
+Job completed successfully
+WARNING: Job only used 1% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 47% of its requested memory.
+Running: ['parallelfeaturesplitGIA.py', 'ERS', 'parfsGIA_ERS_betterconfig_P4', '4', '2']
+[('droidmotoroal', 1.0), ('gps', 0.9111111111111111), ('mysql', 0.8333333333333334), ('implicitreportssync', 0.8), ('sqlite', 0.7777777777777778), ('filemanageropentintents', 0.6923076923076923), ('inhousefilemanager', 0.6153846153846154), ('radiotriangulation', 0.6153846153846154), ('openfire', 0.5), ('inhousechatprotocol', 0.3076923076923077), ('explicitreportssync', 0.30000000000000004)]
+[droidmotoroal]
+[And(Not(droidmotoroal)), And(Not(droidmotoroal)), And(droidmotoroal), And(droidmotoroal)]
+              job id: 7047233
+         exit status: 0
+            cpu time: 131s / 2.0h (1 %)
+        elapsed time: 41s / 1800s (2 %)
+      virtual memory: 1.9G / 4.0G (47 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 47% of its requested memory.

@@ -1,0 +1,9 @@
+=>> PBS: job killed: walltime 518444 exceeded limit 518400
+              job id: 7059596
+         exit status: -10
+            cpu time: 144.0h / 144.0h (99 %)
+        elapsed time: 144.0h / 144.0h (100 %)
+      virtual memory: 1.3G / 4.0G (32 %)
+
+Job returned with status -10.
+WARNING: Job only used 32% of its requested memory.

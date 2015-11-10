@@ -1,0 +1,32 @@
+And(implicitreportssync,
+    Not(inhousefilemanager),
+    sqlite,
+    nexusonehtc,
+    Not(inhousechatprotocol),
+    Not(gps))
+              job id: 7066516
+         exit status: 0
+            cpu time: 3s / 600s (0 %)
+        elapsed time: 4s / 600s (0 %)
+      virtual memory: 419.2M / 2.0G (20 %)
+
+Job completed successfully
+WARNING: Job only used 0% of its requested walltime.
+WARNING: Job only used 0% of its requested cpu time.
+WARNING: Job only used 20% of its requested memory.
+And(implicitreportssync,
+    Not(inhousefilemanager),
+    sqlite,
+    nexusonehtc,
+    Not(inhousechatprotocol),
+    Not(gps))
+              job id: 7066621
+         exit status: 0
+            cpu time: 3s / 600s (0 %)
+        elapsed time: 10s / 600s (1 %)
+      virtual memory: 428.9M / 2.0G (20 %)
+
+Job completed successfully
+WARNING: Job only used 1% of its requested walltime.
+WARNING: Job only used 0% of its requested cpu time.
+WARNING: Job only used 20% of its requested memory.

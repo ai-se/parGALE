@@ -1,0 +1,8 @@
+Not$openfire,Not$explicitreportssync,Not$radiotriangulation
+Not$openfire,Not$explicitreportssync,radiotriangulation
+Not$openfire,explicitreportssync,Not$filemanageropentintents
+Not$openfire,explicitreportssync,filemanageropentintents
+openfire,Not$filemanageropentintents,Not$nexusonehtc
+openfire,Not$filemanageropentintents,nexusonehtc
+openfire,filemanageropentintents,Not$sqlite
+openfire,filemanageropentintents,sqlite

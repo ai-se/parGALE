@@ -1,0 +1,16 @@
+And(radiotriangulation,
+    sqlite,
+    Not(openfire),
+    Not(implicitreportssync),
+    droidmotoroal,
+    filemanageropentintents)
+              job id: 7066820
+         exit status: 0
+            cpu time: 3s / 600s (0 %)
+        elapsed time: 9s / 600s (1 %)
+      virtual memory: 107.7M / 2.0G (5 %)
+
+Job completed successfully
+WARNING: Job only used 1% of its requested walltime.
+WARNING: Job only used 0% of its requested cpu time.
+WARNING: Job only used 5% of its requested memory.

@@ -1,0 +1,50 @@
+              job id: 7068868
+         exit status: 0
+            cpu time: 74s / 600s (12 %)
+        elapsed time: 80s / 600s (13 %)
+      virtual memory: 434.9M / 2.0G (21 %)
+
+Job completed successfully
+WARNING: Job only used 13% of its requested walltime.
+WARNING: Job only used 12% of its requested cpu time.
+WARNING: Job only used 21% of its requested memory.
+              job id: 7068871
+         exit status: 0
+            cpu time: 71s / 600s (11 %)
+        elapsed time: 77s / 600s (12 %)
+      virtual memory: 431.0M / 2.0G (21 %)
+
+Job completed successfully
+WARNING: Job only used 12% of its requested walltime.
+WARNING: Job only used 11% of its requested cpu time.
+WARNING: Job only used 21% of its requested memory.
+              job id: 7068872
+         exit status: 0
+            cpu time: 72s / 600s (12 %)
+        elapsed time: 77s / 600s (12 %)
+      virtual memory: 431.2M / 2.0G (21 %)
+
+Job completed successfully
+WARNING: Job only used 12% of its requested walltime.
+WARNING: Job only used 12% of its requested cpu time.
+WARNING: Job only used 21% of its requested memory.
+              job id: 7068869
+         exit status: 0
+            cpu time: 78s / 600s (13 %)
+        elapsed time: 83s / 600s (13 %)
+      virtual memory: 431.3M / 2.0G (21 %)
+
+Job completed successfully
+WARNING: Job only used 13% of its requested walltime.
+WARNING: Job only used 13% of its requested cpu time.
+WARNING: Job only used 21% of its requested memory.
+              job id: 7068870
+         exit status: 0
+            cpu time: 72s / 600s (12 %)
+        elapsed time: 83s / 600s (13 %)
+      virtual memory: 429.9M / 2.0G (20 %)
+
+Job completed successfully
+WARNING: Job only used 13% of its requested walltime.
+WARNING: Job only used 12% of its requested cpu time.
+WARNING: Job only used 20% of its requested memory.

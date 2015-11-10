@@ -1,0 +1,13 @@
+Algorithm,Cores,Solutions
+without Preprocessing,2,4
+without Preprocessing,4,5
+without Preprocessing,8,12
+without Preprocessing,16,23
+without Preprocessing,32,41
+without Preprocessing,64,90
+with Preprocessing,2,4
+with Preprocessing,4,5
+with Preprocessing,8,12
+with Preprocessing,16,23
+with Preprocessing,32,41
+with Preprocessing,64,90

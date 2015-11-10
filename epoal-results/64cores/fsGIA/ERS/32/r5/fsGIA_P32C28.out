@@ -1,0 +1,15 @@
+And(openfire,
+    mysql,
+    droidmotoroal,
+    Not(radiotriangulation),
+    Not(explicitreportssync))
+              job id: 7066468
+         exit status: 0
+            cpu time: 4s / 600s (0 %)
+        elapsed time: 7s / 600s (1 %)
+      virtual memory: 428.9M / 2.0G (20 %)
+
+Job completed successfully
+WARNING: Job only used 1% of its requested walltime.
+WARNING: Job only used 0% of its requested cpu time.
+WARNING: Job only used 20% of its requested memory.

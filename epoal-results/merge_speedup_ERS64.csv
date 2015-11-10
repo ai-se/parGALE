@@ -1,0 +1,13 @@
+Algorithm,Cores,Time,Prep,70.2,Speedup
+with Preprocessing,2,32.7,1.1,,2.1
+with Preprocessing,4,20.1,2.2,,3.5
+with Preprocessing,8,14.5,3.3,,4.8
+with Preprocessing,16,10.4,4.4,,6.8
+with Preprocessing,32,8.7,5.5,,8.1
+with Preprocessing,64,8.2,6.6,,8.6
+without Preprocessing,2,31.6,,,2.2
+without Preprocessing,4,17.9,,,3.9
+without Preprocessing,8,11.2,,,6.3
+without Preprocessing,16,6,,,11.7
+without Preprocessing,32,3.2,,,21.9
+without Preprocessing,64,1.6,,,43.9

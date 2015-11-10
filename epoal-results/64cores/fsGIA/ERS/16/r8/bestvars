@@ -1,0 +1,16 @@
+Not$nexusonehtc,Not$openfire,Not$inhousefilemanager,Not$gps
+Not$nexusonehtc,Not$openfire,Not$inhousefilemanager,gps
+Not$nexusonehtc,Not$openfire,inhousefilemanager,Not$sqlite
+Not$nexusonehtc,Not$openfire,inhousefilemanager,sqlite
+Not$nexusonehtc,openfire,Not$gps,Not$sqlite
+Not$nexusonehtc,openfire,Not$gps,sqlite
+Not$nexusonehtc,openfire,gps,Not$sqlite
+Not$nexusonehtc,openfire,gps,sqlite
+nexusonehtc,Not$filemanageropentintents,Not$inhousechatprotocol,Not$gps
+nexusonehtc,Not$filemanageropentintents,Not$inhousechatprotocol,gps
+nexusonehtc,Not$filemanageropentintents,inhousechatprotocol,Not$radiotriangulation
+nexusonehtc,Not$filemanageropentintents,inhousechatprotocol,radiotriangulation
+nexusonehtc,filemanageropentintents,Not$sqlite,Not$explicitreportssync
+nexusonehtc,filemanageropentintents,Not$sqlite,explicitreportssync
+nexusonehtc,filemanageropentintents,sqlite,Not$inhousechatprotocol
+nexusonehtc,filemanageropentintents,sqlite,inhousechatprotocol

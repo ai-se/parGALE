@@ -1,0 +1,11 @@
+And(Not(nexusonehtc),
+    radiotriangulation,
+    Not(implicitreportssync))
+              job id: 7066074
+         exit status: 0
+            cpu time: 7s / 600s (1 %)
+        elapsed time: 9s / 600s (1 %)
+
+Job completed successfully
+WARNING: Job only used 1% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.

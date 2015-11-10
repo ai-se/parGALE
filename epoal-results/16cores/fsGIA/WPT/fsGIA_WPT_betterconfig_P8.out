@@ -1,0 +1,127 @@
+Running: ['featuresplitGIA.py', 'WPT', 'fsGIA_WPT_betterconfig_P8', '8', '2']
+[('data_storage', 1.0), ('php', 1.0), ('nttp', 1.0), ('user_auth', 1.0)]
+[data_storage, php, nttp]
+Running: ['featuresplitGIA.py', 'WPT', 'fsGIA_WPT_betterconfig_P8', '8', '2']
+[('data_storage', 1.0), ('php', 1.0), ('nttp', 1.0), ('user_auth', 1.0)]
+[data_storage, php, nttp]
+              job id: 7047020
+         exit status: 0
+            cpu time: 1.5h / 80.0h (1 %)
+        elapsed time: 893s / 10.0h (2 %)
+      virtual memory: 3.0G / 8.0G (37 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 37% of its requested memory.
+              job id: 7047022
+         exit status: 0
+            cpu time: 1.5h / 80.0h (1 %)
+        elapsed time: 877s / 10.0h (2 %)
+      virtual memory: 3.0G / 8.0G (37 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 37% of its requested memory.
+              job id: 7047021
+         exit status: 0
+            cpu time: 1.6h / 80.0h (2 %)
+        elapsed time: 892s / 10.0h (2 %)
+      virtual memory: 3.0G / 8.0G (37 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 2% of its requested cpu time.
+WARNING: Job only used 37% of its requested memory.
+Running: ['featuresplitGIA.py', 'WPT', 'fsGIA_WPT_betterconfig_P8', '8', '2']
+[('data_storage', 1.0), ('php', 1.0), ('nttp', 1.0), ('user_auth', 1.0)]
+[data_storage, php, nttp]
+Running: ['featuresplitGIA.py', 'WPT', 'fsGIA_WPT_betterconfig_P8', '8', '2']
+[('data_storage', 1.0), ('php', 1.0), ('nttp', 1.0), ('user_auth', 1.0)]
+[data_storage, php, nttp]
+Running: ['featuresplitGIA.py', 'WPT', 'fsGIA_WPT_betterconfig_P8', '8', '2']
+[('data_storage', 1.0), ('php', 1.0), ('nttp', 1.0), ('user_auth', 1.0)]
+[data_storage, php, nttp]
+Running: ['featuresplitGIA.py', 'WPT', 'fsGIA_WPT_betterconfig_P8', '8', '2']
+[('data_storage', 1.0), ('php', 1.0), ('nttp', 1.0), ('user_auth', 1.0)]
+[data_storage, php, nttp]
+Running: ['featuresplitGIA.py', 'WPT', 'fsGIA_WPT_betterconfig_P8', '8', '2']
+[('data_storage', 1.0), ('php', 1.0), ('nttp', 1.0), ('user_auth', 1.0)]
+[data_storage, php, nttp]
+Running: ['featuresplitGIA.py', 'WPT', 'fsGIA_WPT_betterconfig_P8', '8', '2']
+[('data_storage', 1.0), ('php', 1.0), ('nttp', 1.0), ('user_auth', 1.0)]
+[data_storage, php, nttp]
+Running: ['featuresplitGIA.py', 'WPT', 'fsGIA_WPT_betterconfig_P8', '8', '2']
+[('data_storage', 1.0), ('php', 1.0), ('nttp', 1.0), ('user_auth', 1.0)]
+[data_storage, php, nttp]
+              job id: 7047023
+         exit status: 0
+            cpu time: 1.5h / 80.0h (1 %)
+        elapsed time: 909s / 10.0h (2 %)
+      virtual memory: 3.0G / 8.0G (37 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 37% of its requested memory.
+              job id: 7047024
+         exit status: 0
+            cpu time: 1.6h / 80.0h (1 %)
+        elapsed time: 914s / 10.0h (2 %)
+      virtual memory: 3.0G / 8.0G (37 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 37% of its requested memory.
+              job id: 7047026
+         exit status: 0
+            cpu time: 1.5h / 80.0h (1 %)
+        elapsed time: 862s / 10.0h (2 %)
+      virtual memory: 3.0G / 8.0G (37 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 37% of its requested memory.
+              job id: 7047025
+         exit status: 0
+            cpu time: 1.5h / 80.0h (1 %)
+        elapsed time: 865s / 10.0h (2 %)
+      virtual memory: 3.0G / 8.0G (37 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.
+WARNING: Job only used 37% of its requested memory.
+              job id: 7047029
+         exit status: 0
+            cpu time: 1.7h / 80.0h (2 %)
+        elapsed time: 927s / 10.0h (2 %)
+      virtual memory: 3.0G / 8.0G (37 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 2% of its requested cpu time.
+WARNING: Job only used 37% of its requested memory.
+              job id: 7047028
+         exit status: 0
+            cpu time: 1.7h / 80.0h (2 %)
+        elapsed time: 951s / 10.0h (2 %)
+      virtual memory: 3.1G / 8.0G (38 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 2% of its requested cpu time.
+WARNING: Job only used 38% of its requested memory.
+              job id: 7047027
+         exit status: 0
+            cpu time: 1.7h / 80.0h (2 %)
+        elapsed time: 964s / 10.0h (2 %)
+      virtual memory: 3.0G / 8.0G (37 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 2% of its requested cpu time.
+WARNING: Job only used 37% of its requested memory.

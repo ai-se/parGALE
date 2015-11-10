@@ -1,0 +1,12 @@
+And(sqlite,
+    inhousefilemanager,
+    Not(explicitreportssync),
+    droidmotoroal)
+              job id: 7066165
+         exit status: 0
+            cpu time: 5s / 600s (0 %)
+        elapsed time: 7s / 600s (1 %)
+
+Job completed successfully
+WARNING: Job only used 1% of its requested walltime.
+WARNING: Job only used 0% of its requested cpu time.

@@ -1,0 +1,16 @@
+Not$data_storage,Not$user_auth,Not$nttp,Not$jsp
+Not$data_storage,Not$user_auth,Not$nttp,jsp
+Not$data_storage,Not$user_auth,nttp,Not$php
+Not$data_storage,Not$user_auth,nttp,php
+Not$data_storage,user_auth,Not$nttp,Not$cgi
+Not$data_storage,user_auth,Not$nttp,cgi
+Not$data_storage,user_auth,nttp,Not$jsp
+Not$data_storage,user_auth,nttp,jsp
+data_storage,Not$nttp,Not$user_auth,Not$php
+data_storage,Not$nttp,Not$user_auth,php
+data_storage,Not$nttp,user_auth,Not$php
+data_storage,Not$nttp,user_auth,php
+data_storage,nttp,Not$user_auth,Not$php
+data_storage,nttp,Not$user_auth,php
+data_storage,nttp,user_auth,Not$cgi
+data_storage,nttp,user_auth,cgi

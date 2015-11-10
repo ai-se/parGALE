@@ -1,0 +1,49 @@
+              job id: 7068879
+         exit status: 0
+            cpu time: 3.7h / 6.0h (61 %)
+        elapsed time: 3.7h / 6.0h (61 %)
+      virtual memory: 510.2M / 4.0G (12 %)
+
+Job completed successfully
+WARNING: Job only used 61% of its requested walltime.
+WARNING: Job only used 61% of its requested cpu time.
+WARNING: Job only used 12% of its requested memory.
+              job id: 7068880
+         exit status: 0
+            cpu time: 3.8h / 6.0h (63 %)
+        elapsed time: 3.8h / 6.0h (63 %)
+      virtual memory: 496.2M / 4.0G (12 %)
+
+Job completed successfully
+WARNING: Job only used 63% of its requested walltime.
+WARNING: Job only used 63% of its requested cpu time.
+WARNING: Job only used 12% of its requested memory.
+              job id: 7068878
+         exit status: 0
+            cpu time: 3.9h / 6.0h (65 %)
+        elapsed time: 3.9h / 6.0h (65 %)
+      virtual memory: 507.4M / 4.0G (12 %)
+
+Job completed successfully
+WARNING: Job only used 65% of its requested walltime.
+WARNING: Job only used 65% of its requested cpu time.
+WARNING: Job only used 12% of its requested memory.
+              job id: 7068881
+         exit status: 0
+            cpu time: 4.6h / 6.0h (76 %)
+        elapsed time: 4.6h / 6.0h (76 %)
+      virtual memory: 504.5M / 4.0G (12 %)
+
+Job completed successfully
+WARNING: Job only used 76% of its requested walltime.
+WARNING: Job only used 76% of its requested cpu time.
+WARNING: Job only used 12% of its requested memory.
+=>> PBS: job killed: cput 21632 exceeded limit 21600
+              job id: 7068873
+         exit status: -10
+            cpu time: 6.0h / 6.0h (100 %)
+        elapsed time: 6.0h / 6.0h (100 %)
+      virtual memory: 504.2M / 4.0G (12 %)
+
+Job returned with status -10.
+WARNING: Job only used 12% of its requested memory.

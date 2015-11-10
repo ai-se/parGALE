@@ -1,0 +1,9 @@
+And(Not(filemanageropentintents), sqlite, Not(nexusonehtc))
+              job id: 7066138
+         exit status: 0
+            cpu time: 10s / 600s (1 %)
+        elapsed time: 12s / 600s (2 %)
+
+Job completed successfully
+WARNING: Job only used 2% of its requested walltime.
+WARNING: Job only used 1% of its requested cpu time.

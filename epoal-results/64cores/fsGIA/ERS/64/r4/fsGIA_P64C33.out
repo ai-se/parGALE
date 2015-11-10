@@ -1,0 +1,14 @@
+And(radiotriangulation,
+    Not(sqlite),
+    Not(inhousefilemanager),
+    Not(implicitreportssync),
+    Not(droidmotoroal),
+    openfire)
+              job id: 7066802
+         exit status: 0
+            cpu time: 3s / 600s (0 %)
+        elapsed time: 4s / 600s (0 %)
+
+Job completed successfully
+WARNING: Job only used 0% of its requested walltime.
+WARNING: Job only used 0% of its requested cpu time.
