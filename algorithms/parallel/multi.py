@@ -29,18 +29,19 @@ class Consumer(multiprocessing.Process):
   def default_settings():
     return O(
       seed = 0,
-      max_gens = 8
+      max_gens = 100
     )
 
   def run(self):
     best_solutions, evals = self.optimizer.run(self.initial_pop)
-    [self.results.append(sol) for sol in best_solutions]
+    self.results[self.index] = best_solutions
     self.total_time = time.time() - self.start_time
     child_outfile = open(str(str(self.outfile)+'C'+str(self.index)+'.csv'), 'a')
+    front_size = sum([len(solns) for solns in best_solutions])
     try:
       child_outfile.writelines(
         str(self.index) + ',' +
-        str(len(best_solutions)) + ',' +
+        str(front_size) + ',' +
         str(self.total_time) + '\n')
     finally:
       child_outfile.close()

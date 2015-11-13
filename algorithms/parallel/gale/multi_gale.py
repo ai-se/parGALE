@@ -14,7 +14,7 @@ def default_settings():
   """
   return O(
     pop_size        = 100,
-    gens            = 160,
+    gens            = 100,
     allowDomination = True,
     gamma           = 0.15
   )
@@ -121,7 +121,7 @@ class GALE(Algorithm):
     evals = 0
     for leaf in non_dom_leaves:
       east = leaf._pop[0]
-      west = leaf._pop[-1]
+      west =  leaf._pop[-1]
       if not east.evaluated:
         east.evaluate(self.problem)
         evals += 1
@@ -157,8 +157,10 @@ class GALE(Algorithm):
     while gen < max_gens:
       say(".")
       selectees, evals =  self.select(population)
+      total_evals += evals
+
       solutions, evals = self.get_best(selectees)
-      best_solutions += solutions
+      best_solutions.append(solutions)
       total_evals += evals
 
       # EVOLUTION
@@ -178,7 +180,7 @@ if __name__ == "__main__":
   num_consumers = int(str(sys.argv[2]).strip())
   outfile = str(sys.argv[1]).strip()
   manager = multiprocessing.Manager()
-  results = manager.list()
+  results = manager.dict()
   model = DTLZ2(3)
   opt = GALE(model)
   consumers = [Consumer(opt, results, i, outfile, num_consumers) for i in range(num_consumers)]
@@ -189,10 +191,12 @@ if __name__ == "__main__":
     consumer.join()
   total_time = time.time() - start_time
   outfile_main = open(str(outfile+'.csv'), 'a')
+  result_count = sum([len(soln) for i in range(num_consumers) for soln in results[i]])
+  print("")
   try:
     outfile_main.writelines(
       str(num_consumers) + ',' +
-      str(len(results)) + ',' +
+      str(result_count) + ',' +
       str(total_time) + '\n'
     )
   finally:

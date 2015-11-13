@@ -19,7 +19,7 @@ def default_settings():
   :return: default settings
   """
   return O(
-    pop_size        = 200,
+    pop_size        = 100,
     gens            = 160,
     allowDomination = True,
     gamma           = 0.15
