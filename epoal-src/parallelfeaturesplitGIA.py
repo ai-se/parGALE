@@ -9,7 +9,7 @@ from FeatureSplitConfig import ers_optional_names, bdb_optional_names, \
 from consts import METRICS_MAXIMIZE, METRICS_MINIMIZE
 from npGIAforZ3 import GuidedImprovementAlgorithm, \
     GuidedImprovementAlgorithmOptions
-from src.FeatureSplitConfig import ers_better_config_names, \
+from FeatureSplitConfig import ers_better_config_names, \
     eshop_better_config_names, webportal_better_config_names
 from z3 import *
 import argparse
