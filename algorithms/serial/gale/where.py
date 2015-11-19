@@ -53,7 +53,8 @@ class NodePoint(Point):
     :return:
     """
     other = NodePoint(self.decisions)
-    other.objectives = self.objectives
+    other.decisions = other.decisions
+    other.objectives = clone(self.objectives)
     other.evaluated = self.evaluated
     other.a, other.b = self.a, self.b
     other.c, other.x = self.c, self.x

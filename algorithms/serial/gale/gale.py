@@ -14,12 +14,15 @@ def default_settings():
   """
   return O(
     pop_size        = 100,
-    gens            = 100,
+    gens            = 50,
     allowDomination = True,
     gamma           = 0.15
   )
 
+
 class GALE(Algorithm):
+  count = 0
+  unsatisfied = 0
   """
   .. [Krall2015] Krall, Menzies et.all, "
       GALE: Geometric Active Learning for Search-Based Software Engineering"
@@ -171,7 +174,9 @@ class GALE(Algorithm):
         b = row.dist(self.problem, south_pole, is_obj=False)
         x = (a**2 + row.c**2 - b**2) / (2*row.c+0.00001)
         row.x = x
-        if abs(x - clone_x) > (g * GAMMA) or not self.problem.check_constraints(row):
+        GALE.count += 1
+        if abs(x - clone_x) > (g * GAMMA) or not self.problem.check_constraints(row.decisions):
+          GALE.unsatisfied += 1
           row.decisions = clone.decisions
           row.x = clone_x
 
@@ -192,10 +197,14 @@ class GALE(Algorithm):
     return mutants + Node.format(pop), 0
 
 def _test():
-  from problems.dtlz.dtlz2 import DTLZ2
-  o = DTLZ2(3)
+  from problems.feature_models.webportal import WebPortal
+  import time
+  o = WebPortal()
   gale = GALE(o)
+  start = time.time()
   gale.run()
+  print(time.time() - start)
+  print(GALE.count, GALE.unsatisfied)
 
 if __name__ == "__main__":
   _test()

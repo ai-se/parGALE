@@ -138,6 +138,11 @@ def sin(val):
   """
   return math.sin(val)
 
+def clone(lst):
+  if lst is None:
+    return None
+  return lst[:]
+
 class Point(O):
 
   def __init__(self, decisions, problem=None):
@@ -147,7 +152,7 @@ class Point(O):
     :param problem: Instance of the problem
     """
     O.__init__(self)
-    self.decisions = decisions
+    self.decisions = clone(decisions)
     if problem:
       self.objectives = problem.evaluate(decisions)
     else:

@@ -175,13 +175,14 @@ class GALE(Algorithm):
 
 if __name__ == "__main__":
   from problems.dtlz.dtlz2 import DTLZ2
+  from problems.feature_models.webportal import WebPortal
   from algorithms.parallel.multi import *
 
   num_consumers = int(str(sys.argv[2]).strip())
   outfile = str(sys.argv[1]).strip()
   manager = multiprocessing.Manager()
   results = manager.dict()
-  model = DTLZ2(3)
+  model = WebPortal()
   opt = GALE(model)
   consumers = [Consumer(opt, results, i, outfile, num_consumers) for i in range(num_consumers)]
   start_time = time.time()
