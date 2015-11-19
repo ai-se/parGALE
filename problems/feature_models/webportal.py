@@ -437,11 +437,6 @@ class WebPortal(FeatureModel):
 
 def _test():
   portal = WebPortal()
-  set_option('smt.random_seed',400)
-  # set_option('sat.random_seed',300)
-  # set_option('smt.arith.random_initial_value',True)
-  # set_option('smt.random_seed', 25)
-  # set_option('arith.random_seed', 1)
   pop = portal.populate(5)
   for one in pop:
     print(portal.evaluate(one))
