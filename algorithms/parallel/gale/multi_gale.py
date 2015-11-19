@@ -13,8 +13,8 @@ def default_settings():
   :return: default settings
   """
   return O(
-    pop_size        = 100,
-    gens            = 100,
+    pop_size        = 50,
+    gens            = 160,
     allowDomination = True,
     gamma           = 0.15
   )
@@ -191,17 +191,19 @@ if __name__ == "__main__":
   for consumer in consumers:
     consumer.join()
   total_time = time.time() - start_time
-  outfile_main = open(str(outfile+'.csv'), 'a')
+  outfile_main = open(str("results/"+outfile+'.csv'), 'a')
   result_count = sum([len(soln) for i in range(num_consumers) for soln in results[i]])
   print("")
   try:
     outfile_main.writelines(
-      str(num_consumers) + ',' +
-      str(result_count) + ',' +
-      str(total_time) + '\n'
+        str(num_consumers) + ',' +
+        str(result_count) + ',' +
+        str(total_time) + '\n'
     )
   finally:
     outfile_main.close()
+
+
 
 
 

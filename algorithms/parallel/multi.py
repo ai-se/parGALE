@@ -29,14 +29,14 @@ class Consumer(multiprocessing.Process):
   def default_settings():
     return O(
       seed = 0,
-      max_gens = 100
+      max_gens = 160
     )
 
   def run(self):
     best_solutions, evals = self.optimizer.run(self.initial_pop)
     self.results[self.index] = best_solutions
     self.total_time = time.time() - self.start_time
-    child_outfile = open(str(str(self.outfile)+'C'+str(self.index)+'.csv'), 'a')
+    child_outfile = open(str("results/"+str(self.outfile)+'C'+str(self.index)+'.csv'), 'a')
     front_size = sum([len(solns) for solns in best_solutions])
     try:
       child_outfile.writelines(
