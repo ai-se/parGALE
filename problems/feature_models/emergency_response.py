@@ -483,10 +483,10 @@ class EmergencyResponse(FeatureModel):
     self.name = EmergencyResponse.__name__
 
 def _test():
-  portal = EmergencyResponse()
-  pop = portal.populate(5)
+  ers = EmergencyResponse()
+  pop = ers.populate(5)
   for one in pop:
-    print(portal.evaluate(one))
+    print(ers.evaluate(one))
 
 if __name__ == "__main__":
   _test()
