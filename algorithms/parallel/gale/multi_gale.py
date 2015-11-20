@@ -1,5 +1,5 @@
 from __future__ import print_function, division
-import sys, os
+import sys, os, datetime
 sys.path.append(os.path.abspath("."))
 from utils.lib import *
 from algorithms.serial.algorithm import Algorithm
@@ -98,8 +98,8 @@ class GALE(Algorithm):
     pop = []
     for leaf in selected:
       for row in leaf._pop:
-        if row.evaluated:
-          row.evaluate(self.problem) # Re-evaluating
+        # if row.evaluated:
+        #   row.evaluate(self.problem) # Re-evaluating
         pop.append(row)
     return pop, evals
 
@@ -179,7 +179,7 @@ if __name__ == "__main__":
   from algorithms.parallel.multi import *
 
   num_consumers = int(str(sys.argv[2]).strip())
-  outfile = str(sys.argv[1]).strip()
+  outfile = str(sys.argv[1]).strip()+str(datetime.date.today())
   manager = multiprocessing.Manager()
   results = manager.dict()
   model = WebPortal()
