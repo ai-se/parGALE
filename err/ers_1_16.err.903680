@@ -1,0 +1,20 @@
+Process Consumer-2:
+Traceback (most recent call last):
+  File "/share/george2/miniconda/lib/python2.7/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/gpfs_common/share/george2/Raise/parGALE/algorithms/parallel/multi.py", line 36, in run
+    best_solutions, evals = self.optimizer.run(self.initial_pop)
+  File "algorithms/parallel/gale/multi_gale.py", line 170, in run
+    population, evals = self.recombine(selectees, self.settings.pop_size)
+  File "algorithms/parallel/gale/multi_gale.py", line 110, in _recombine
+    pop.append(self.problem.generate())
+  File "/gpfs_common/share/george2/Raise/parGALE/problems/feature_models/base.py", line 52, in generate
+    assert False, "Unsatisfiability reached"
+AssertionError: Unsatisfiability reached
+Traceback (most recent call last):
+  File "algorithms/parallel/gale/multi_gale.py", line 200, in <module>
+    result_count = sum([len(soln) for i in range(num_consumers) for soln in results[i]])
+  File "<string>", line 2, in __getitem__
+  File "/share/george2/miniconda/lib/python2.7/multiprocessing/managers.py", line 774, in _callmethod
+    raise convert_to_error(kind, result)
+KeyError: 0
