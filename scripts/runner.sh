@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-if [ "$#" -ne 3 ]; then
+if [ "$#" -ne 4 ]; then
   echo "Illegal number parameters"
   exit 1
 fi
 
-for (( N=$2; N<=$3; N++ ))
+for (( N=$3; N<=$4; N++ ))
   do
     echo "\nNumber of processors : $N"
-    $PYTHON algorithms/parallel/gale/multi_gale.py $1 $N
+    $PYTHON algorithms/parallel/gale/multi_gale.py $1 $2 $N
 done
 
 

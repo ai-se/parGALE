@@ -176,13 +176,18 @@ class GALE(Algorithm):
 if __name__ == "__main__":
   from problems.dtlz.dtlz2 import DTLZ2
   from problems.feature_models.webportal import WebPortal
+  from problems.feature_models.emergency_response import EmergencyResponse
   from algorithms.parallel.multi import *
-
-  num_consumers = int(str(sys.argv[2]).strip())
-  outfile = str(sys.argv[1]).strip()+str(datetime.date.today())
+  if str(sys.argv[1]) == "WPT":
+    model = WebPortal()
+  elif str(sys.argv[1]) == "ERS":
+    model = EmergencyResponse()
+  else:
+    assert False, "Invalid Argument"
+  num_consumers = int(str(sys.argv[3]).strip())
+  outfile = str(sys.argv[2]).strip()+"_"+str(datetime.date.today())
   manager = multiprocessing.Manager()
   results = manager.dict()
-  model = WebPortal()
   opt = GALE(model)
   consumers = [Consumer(opt, results, i, outfile, num_consumers) for i in range(num_consumers)]
   start_time = time.time()
