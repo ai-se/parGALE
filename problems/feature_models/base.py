@@ -5,6 +5,7 @@ from z3 import *
 from utils.lib import *
 from problems.problem import Problem, Decision, Objective
 from math import tan
+from utils.exceptions import RuntimeException
 
 __author__ = 'panzer'
 
@@ -61,7 +62,7 @@ class FeatureModel(Problem):
       self.add_to_population_constraint(decs)
       return [is_true(d) for d in decs]
     else:
-      assert False, "Unsatisfiability reached"
+      raise RuntimeException("Unsatisfiability reached")
 
   def check_constraints(self, decisions):
     cloned = clone(self.base_solver)

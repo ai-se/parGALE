@@ -4,6 +4,7 @@ sys.path.append(os.path.abspath("."))
 from utils.lib import *
 from algorithms.serial.algorithm import Algorithm
 from algorithms.serial.gale.where import Node, sqrt
+from utils.exceptions import RuntimeException
 
 __author__ = 'panzer'
 
@@ -154,20 +155,24 @@ class GALE(Algorithm):
     if population is None:
       population = Node.format(self.problem.populate(self.settings.pop_size))
     total_evals = 0
-    while gen < max_gens:
-      say(".")
-      selectees, evals =  self.select(population)
-      total_evals += evals
+    try:
+      while gen < max_gens:
+        say(".")
+        selectees, evals =  self.select(population)
+        total_evals += evals
 
-      solutions, evals = self.get_best(selectees)
-      best_solutions.append(solutions)
-      total_evals += evals
+        solutions, evals = self.get_best(selectees)
+        best_solutions.append(solutions)
+        total_evals += evals
 
-      # EVOLUTION
-      selectees, evals = self.evolve(selectees)
-      total_evals += evals
+        # EVOLUTION
+        selectees, evals = self.evolve(selectees)
+        total_evals += evals
 
-      population, evals = self.recombine(selectees, self.settings.pop_size)
-      total_evals += evals
-      gen += 1
+        population, evals = self.recombine(selectees, self.settings.pop_size)
+        total_evals += evals
+        gen += 1
+    except RuntimeException as e:
+      e.print_trace()
+      return best_solutions, total_evals
     return best_solutions, total_evals
