@@ -8,7 +8,7 @@ fi
 for (( N=$3; N<=$4; N++ ))
   do
     echo "\nNumber of processors : $N"
-    $PYTHON algorithms/parallel/gale/multi_gale.py $1 $2 $N
+    $PYTHON runner.py $1 $2 $N
 done
 
 

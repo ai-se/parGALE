@@ -4,6 +4,7 @@ sys.path.append(os.path.abspath("."))
 from problems.feature_models.consts import METRICS_MINIMIZE, METRICS_MAXIMIZE
 from collections import OrderedDict
 from base import *
+from math import pi, tan
 
 __author__ = 'panzer'
 
@@ -424,15 +425,41 @@ s.add(web_portal == True)
 metrics_variables = [total_Cost, total_Defects, total_FeatureCount, total_UsedBefore]
 metrics_objective_direction = [METRICS_MINIMIZE, METRICS_MINIMIZE, METRICS_MINIMIZE, METRICS_MINIMIZE]
 
-highs = [421.5, 30, 43, 145]
+highs = [422, 30, 43, 145]
 lows = [0.0, 0, 0, 0]
 
 
 class WebPortal(FeatureModel):
-  def __init__(self, directions=None, **settings):
+  def __init__(self, directions=None, is_empty=False, **settings):
     FeatureModel.__init__(self, FeatureVariable, metrics_variables,
-                          s, highs, lows, directions, **settings)
+                          s, highs, lows, directions, is_empty, **settings)
     self.name = WebPortal.__name__
+
+  @staticmethod
+  def region_constraints(index, total):
+    degree = 90/total
+    split_rules = []
+    if index == 0:
+      radian_higher = degree * pi / 180
+      gradient_higher = FeatureModel.get_gradient(radian_higher)
+      split_rules.append(1000 * (total_Cost - 422) * 145 >= IntVal(gradient_higher) * (total_Defects - 145) * 422)
+    elif index == total - 1:
+      radian_lower = (degree * index) * pi / 180
+      gradient_lower = FeatureModel.get_gradient(radian_lower)
+      split_rules.append(1000 * (total_Cost - 422) * 145 < IntVal(gradient_lower) * (total_Defects - 145) * 422)
+    else:
+      radian_lower = (degree * index) * pi / 180
+      gradient_lower = FeatureModel.get_gradient(radian_lower)
+      split_rules.append(1000 * (total_Cost - 422) * 145 < IntVal(gradient_lower) * (total_Defects - 145) * 422)
+      radian_higher = (degree * (index + 1)) * pi / 180
+      gradient_higher = FeatureModel.get_gradient(radian_higher)
+      split_rules.append(1000 * (total_Cost - 422) * 145 >= IntVal(gradient_higher) * (total_Defects - 145) * 422)
+    return And(split_rules)
+
+  def clone(self, other=None):
+    other = WebPortal(is_empty=True)
+    return FeatureModel.clone(self, other)
+
 
 
 def _test():

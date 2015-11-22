@@ -475,12 +475,16 @@ lows = [0, 0, 0, 0, 17.89, 0, 0]
 default_directions = [True, True, True, True, True, False, True]
 
 class EmergencyResponse(FeatureModel):
-  def __init__(self, directions=None, **settings):
+  def __init__(self, directions=None, is_empty=False, **settings):
     if directions is None:
       directions = default_directions
     FeatureModel.__init__(self, FeatureVariable, metrics_variables,
-                          s, highs, lows, directions, **settings)
+                          s, highs, lows, directions, is_empty, **settings)
     self.name = EmergencyResponse.__name__
+
+  def clone(self, other=None):
+    other = EmergencyResponse(is_empty=True)
+    return FeatureModel.clone(self, other)
 
 def _test():
   ers = EmergencyResponse()

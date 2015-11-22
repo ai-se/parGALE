@@ -10,18 +10,17 @@ __author__ = 'panzer'
 
 
 class Consumer(multiprocessing.Process):
-  def __init__(self, optimizer, results, index, outfile, total_consumers, initial_pop = None, **settings):
+  def __init__(self, optimizer, model, results, index, outfile, total_consumers, initial_pop = None, **settings):
     multiprocessing.Process.__init__(self)
     self.settings = Consumer.default_settings().update(**settings)
     self.results = results
     self.index = index
     self.outfile = outfile
-    self.optimizer = optimizer
     self.initial_pop = initial_pop
-    if index == total_consumers - 1:
-      self.optimizer.settings.max_gens = self.settings.max_gens / total_consumers
-    else:
-      self.optimizer.settings.max_gens = self.settings.max_gens - (total_consumers - 1) * self.settings.max_gens / total_consumers
+    cloned_model = model.clone()
+    #cloned_model.solver.add(cloned_model.region_constraints(index, total_consumers))
+    self.optimizer = optimizer(cloned_model)
+    self.optimizer.settings.max_gens = self.settings.max_gens / total_consumers
     self.start_time =  time.time()
     self.total_time = 0
 
@@ -37,7 +36,7 @@ class Consumer(multiprocessing.Process):
     self.results[self.index] = best_solutions
     self.total_time = time.time() - self.start_time
     child_outfile = open(str("results/"+str(self.outfile)+'C'+str(self.index)+'.csv'), 'a')
-    front_size = sum([len(solns) for solns in best_solutions])
+    front_size = sum([len(solutions) for solutions in best_solutions])
     try:
       child_outfile.writelines(
         str(self.index) + ',' +

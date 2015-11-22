@@ -4,6 +4,7 @@ sys.path.append(os.path.abspath("."))
 from z3 import *
 from utils.lib import *
 from problems.problem import Problem, Decision, Objective
+from math import tan
 
 __author__ = 'panzer'
 
@@ -13,8 +14,10 @@ def clone(solver):
   return cloned
 
 class FeatureModel(Problem):
-  def __init__(self, decision_vector, objective_vector, solver, highs, lows, directions=None, **settings):
+  def __init__(self, decision_vector, objective_vector, solver, highs, lows, directions=None, is_empty=False, **settings):
     Problem.__init__(self)
+    if is_empty:
+      return
     if not directions:
       directions = [True]*len(objective_vector)
     self.decisions = [Decision(dec.decl().name(), is_true(False), is_true(True)) for dec in decision_vector]
@@ -23,6 +26,15 @@ class FeatureModel(Problem):
     self.objective_vector = objective_vector
     self.solver = solver
     self.base_solver = clone(solver)
+
+  def clone(self, other):
+    other.decisions = self.decisions[:]
+    other.objectives = self.objectives[:]
+    other.decision_vector = self.decision_vector
+    other.objective_vector = self.objective_vector
+    other.solver = clone(self.solver)
+    other.base_solver = clone(self.base_solver)
+    return other
 
   def dist(self, one, two, one_norm = True, two_norm = True, is_obj = True):
     if is_obj:
@@ -83,3 +95,18 @@ class FeatureModel(Problem):
       return FeatureModel.format_objective(val.approx())
     else:
       assert False, "Invalid Objective Type"
+
+  @staticmethod
+  def region_constraints(index, total):
+    """
+    Method to create additional constraints
+    for each processor
+    :param index: Index of processor run on
+    :param total: Total number of processors
+    :return:
+    """
+    assert False
+
+  @staticmethod
+  def get_gradient(radian):
+    return int(1000 * round(tan(radian), 3))

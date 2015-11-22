@@ -2,7 +2,7 @@
 
 if [ "$#" -ne 4 ]; then
   echo "Illegal number parameters"
-  echo "sh hpc_benchmark.sh <outfile> <min_processors> <max_processors>"
+  echo "sh hpc_benchmark.sh <model> <outfile> <min_processors> <max_processors>"
   exit 1
 fi
 
