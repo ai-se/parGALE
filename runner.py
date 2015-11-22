@@ -5,6 +5,7 @@ from problems.feature_models.webportal import WebPortal
 from problems.feature_models.emergency_response import EmergencyResponse
 from algorithms.parallel.multi import *
 from algorithms.parallel.gale.multi_gale import GALE
+from utils.lib import mkdir
 
 if __name__ == "__main__":
   if str(sys.argv[1]) == "WPT":
@@ -13,7 +14,8 @@ if __name__ == "__main__":
     model = EmergencyResponse()
   else:
     assert False, "Invalid Argument"
-  outfile = str(sys.argv[2]).strip()+"_"+str(datetime.date.today())
+  new_dir = mkdir("results/"+str(datetime.date.today())+"/")
+  outfile = new_dir+str(sys.argv[2]).strip()
   num_consumers = int(str(sys.argv[3]).strip())
   manager = multiprocessing.Manager()
   results = manager.dict()
@@ -25,7 +27,7 @@ if __name__ == "__main__":
   for consumer in consumers:
     consumer.join()
   total_time = time.time() - start_time
-  outfile_main = open(str("results/"+outfile+'.csv'), 'a')
+  outfile_main = open(str(outfile+'.csv'), 'a')
   result_count = sum([len(soln) for i in range(num_consumers) for soln in results[i]])
   print("")
   try:

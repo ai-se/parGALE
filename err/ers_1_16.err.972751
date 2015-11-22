@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "/gpfs_common/share/george2/Raise/parGALE/algorithms/parallel/gale/multi_gale.py", line 172, in run
-    population, evals = self.recombine(selectees, self.settings.pop_size)
-  File "/gpfs_common/share/george2/Raise/parGALE/algorithms/parallel/gale/multi_gale.py", line 111, in _recombine
-    pop.append(self.problem.generate())
-  File "/gpfs_common/share/george2/Raise/parGALE/problems/feature_models/base.py", line 65, in generate
-    raise RuntimeException("Unsatisfiability reached")
-RuntimeException: Unsatisfiability reached

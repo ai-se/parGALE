@@ -18,7 +18,7 @@ class Consumer(multiprocessing.Process):
     self.outfile = outfile
     self.initial_pop = initial_pop
     cloned_model = model.clone()
-    #cloned_model.solver.add(cloned_model.region_constraints(index, total_consumers))
+    cloned_model.solver.add(cloned_model.region_constraints(index, total_consumers))
     self.optimizer = optimizer(cloned_model)
     self.optimizer.settings.max_gens = self.settings.max_gens / total_consumers
     self.start_time =  time.time()
@@ -35,7 +35,7 @@ class Consumer(multiprocessing.Process):
     best_solutions, evals = self.optimizer.run(self.initial_pop)
     self.results[self.index] = best_solutions
     self.total_time = time.time() - self.start_time
-    child_outfile = open(str("results/"+str(self.outfile)+'C'+str(self.index)+'.csv'), 'a')
+    child_outfile = open(str(str(self.outfile)+'C'+str(self.index)+'.csv'), 'a')
     front_size = sum([len(solutions) for solutions in best_solutions])
     try:
       child_outfile.writelines(

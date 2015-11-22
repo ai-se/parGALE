@@ -152,10 +152,10 @@ class GALE(Algorithm):
     best_solutions = []
     max_gens = self.settings.max_gens
     population = init_pop
-    if population is None:
-      population = Node.format(self.problem.populate(self.settings.pop_size))
     total_evals = 0
     try:
+      if population is None:
+        population = Node.format(self.problem.populate(self.settings.pop_size))
       while gen < max_gens:
         say(".")
         selectees, evals =  self.select(population)

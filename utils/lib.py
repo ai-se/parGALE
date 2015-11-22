@@ -3,7 +3,7 @@ Standard library files and operators
 """
 from __future__ import print_function, division
 import random
-import sys
+import sys, os
 import math
 
 # Constants
@@ -192,4 +192,9 @@ def report(lst, name):
   print("LOW  : ", low)
   print("HIGH : ", high)
   print("MED  : ", med)
+
+def mkdir(directory):
+  if not os.path.exists(directory):
+    os.makedirs(directory)
+  return directory
 

@@ -4,6 +4,7 @@ sys.path.append(os.path.abspath("."))
 from problems.feature_models.consts import METRICS_MINIMIZE, METRICS_MAXIMIZE
 from collections import OrderedDict
 from base import *
+from math import pi
 
 __author__ = 'panzer'
 
@@ -485,6 +486,27 @@ class EmergencyResponse(FeatureModel):
   def clone(self, other=None):
     other = EmergencyResponse(is_empty=True)
     return FeatureModel.clone(self, other)
+
+  @staticmethod
+  def region_constraints(index, total):
+    degree = 90/total
+    split_rules = []
+    if index == 0:
+      radian_higher = degree * pi / 180
+      gradient_higher = FeatureModel.get_gradient(radian_higher)
+      split_rules.append(1000 * (total_responsetime - 2070) * 629 >= IntVal(gradient_higher) * (total_cost - 3145) * 414)
+    elif index == total - 1:
+      radian_lower = (degree * index) * pi / 180
+      gradient_lower = FeatureModel.get_gradient(radian_lower)
+      split_rules.append(1000 * (total_responsetime - 2070) * 629 < IntVal(gradient_lower) * (total_cost - 3145) * 414)
+    else:
+      radian_lower = (degree * index) * pi / 180
+      gradient_lower = FeatureModel.get_gradient(radian_lower)
+      split_rules.append(1000 * (total_responsetime - 2070) * 629 < IntVal(gradient_lower) * (total_cost - 3145) * 414)
+      radian_higher = (degree * (index + 1)) * pi / 180
+      gradient_higher = FeatureModel.get_gradient(radian_higher)
+      split_rules.append(1000 * (total_responsetime - 2070) * 629 >= IntVal(gradient_higher) * (total_cost - 3145) * 414)
+    return And(split_rules)
 
 def _test():
   ers = EmergencyResponse()
