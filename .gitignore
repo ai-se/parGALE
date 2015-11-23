@@ -61,3 +61,7 @@ target/
 
 #Idea
 .idea/
+
+#Par GALE Stuff
+out/*
+err/*
