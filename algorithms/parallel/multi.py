@@ -18,9 +18,10 @@ class Consumer(multiprocessing.Process):
     self.outfile = outfile
     self.initial_pop = initial_pop
     cloned_model = model.clone()
-    cloned_model.solver.add(cloned_model.region_constraints(index, total_consumers))
+    #cloned_model.solver.add(cloned_model.region_constraints(index, total_consumers))
     self.optimizer = optimizer(cloned_model)
-    self.optimizer.settings.max_gens = self.settings.max_gens / total_consumers
+    self.optimizer.settings.max_gens = self.settings.max_gens // total_consumers
+    self.optimizer.settings.pop_size = self.settings.pop_size
     self.start_time =  time.time()
     self.total_time = 0
 
@@ -28,7 +29,8 @@ class Consumer(multiprocessing.Process):
   def default_settings():
     return O(
       seed = 0,
-      max_gens = 160
+      max_gens = 160,
+      pop_size = 50
     )
 
   def run(self):
