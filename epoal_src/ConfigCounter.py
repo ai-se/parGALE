@@ -143,7 +143,7 @@ def main(experiment, maxdepth=1, workingdir=""):
     global tempfile
     tempfile = workingdir+tempfile + experiment + "_" + str(maxdepth)
     genTempFile("", 0,experiment, TCL, VARS,[])
-    output = Popen(["./sharpSAT.exe -q " + tempfile], stderr=open("/dev/null", "w"),stdout=PIPE,shell=True)
+    output = Popen(["./sharpSAT -q " + tempfile], stderr=open("/dev/null", "w"),stdout=PIPE,shell=True)
     val=int(output.stdout.read())
     #print("Total Configs: " + str(val))
     for i in range(MAXDEPTH+1):
