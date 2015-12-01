@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-if [ "$#" -ne 4 ]; then
+if [ "$#" -ne 5 ]; then
   echo "Illegal number parameters"
   exit 1
 fi
 
-for (( N=$3; N<=$4; N++ ))
+for (( N=$4; N<=$5; N++ ))
   do
     echo "\nNumber of processors : $N"
-    $PYTHON runner.py $1 $2 $N
+    $PYTHON runner.py $1 $2 $3 $N
 done
 
 

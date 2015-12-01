@@ -5,6 +5,7 @@ from problems.feature_models.webportal import WebPortal
 from problems.feature_models.emergency_response import EmergencyResponse
 from algorithms.parallel.multi import *
 from algorithms.parallel.gale.multi_gale import GALE
+from algorithms.parallel.de.multi_de import DE
 from utils.lib import mkdir
 
 if __name__ == "__main__":
@@ -14,12 +15,17 @@ if __name__ == "__main__":
     model = EmergencyResponse()
   else:
     assert False, "Invalid Argument"
+  if str(sys.argv[2]) == "DE":
+    optimizer = DE
+  elif str(sys.argv[2]) == "GALE":
+    optimizer = GALE
+  else:
+    assert False, "Invalid Argument"
   new_dir = mkdir("results/"+str(datetime.date.today())+"/")
-  outfile = new_dir+str(sys.argv[2]).strip()
-  num_consumers = int(str(sys.argv[3]).strip())
+  outfile = new_dir+str(sys.argv[3]).strip()
+  num_consumers = int(str(sys.argv[4]).strip())
   manager = multiprocessing.Manager()
   results = manager.dict()
-  optimizer = GALE
   consumers = [Consumer(optimizer, model, results, i, outfile, num_consumers) for i in range(num_consumers)]
   start_time = time.time()
   for consumer in consumers:
@@ -28,7 +34,7 @@ if __name__ == "__main__":
     consumer.join()
   total_time = time.time() - start_time
   outfile_main = open(str(outfile+'.csv'), 'a')
-  result_count = sum([len(soln) for i in range(num_consumers) for soln in results[i]])
+  result_count = sum([len(results[i]) for i in range(num_consumers)])
   print("")
   try:
     outfile_main.writelines(
