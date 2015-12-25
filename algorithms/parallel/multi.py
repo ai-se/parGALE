@@ -36,7 +36,7 @@ class Consumer(multiprocessing.Process):
   def default_settings():
     return O(
       seed = 0,
-      GALE_max_gens = 20,
+      GALE_max_gens = 160,
       GALE_pop_size = 50,
       DE_max_gens = 50,
       DE_pop_size = 160,
