@@ -62,7 +62,7 @@ class FeatureModel(Problem):
       self.add_to_population_constraint(decs)
       return [is_true(d) for d in decs]
     else:
-      raise RuntimeException("Unsatisfiability reached")
+       raise RuntimeException("Unsatisfiability reached")
 
   def check_constraints(self, decisions):
     cloned = clone(self.base_solver)

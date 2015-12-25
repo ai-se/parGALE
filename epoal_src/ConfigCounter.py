@@ -155,9 +155,9 @@ def main(experiment, maxdepth=1, workingdir=""):
 
 
 if __name__ == '__main__':
-    #sys.argv.append("ERS")
-    #sys.argv.append(3)
-    #sys.argv.append("")
+    sys.argv.append("ERS")
+    sys.argv.append(3)
+    sys.argv.append("")
     ########
     experiment = sys.argv[1]
     depth = int(sys.argv[2])
