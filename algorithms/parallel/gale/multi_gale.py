@@ -170,7 +170,6 @@ class GALE(Algorithm):
         total_evals += evals
 
         population, evals = self.recombine(selectees, self.settings.pop_size)
-        print(len(population))
         total_evals += evals
         gen += 1
     except RuntimeException as e:
