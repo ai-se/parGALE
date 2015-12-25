@@ -22,7 +22,8 @@ def default_settings():
     pop_size        = 100,
     gens            = 160,
     allowDomination = True,
-    gamma           = 0.15
+    gamma           = 0.15,
+    is_binary       = True,
   )
 
 def per_core(value):

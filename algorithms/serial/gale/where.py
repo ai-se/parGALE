@@ -10,7 +10,8 @@ def settings():
   return O(
     verbose =  False,
     b4 = '|.. ',
-    seed = 1
+    seed = 1,
+    is_binary = True,
   )
 
 def configs(**d):
@@ -72,6 +73,19 @@ class NodePoint(Point):
     self.x = None              # Projection of point on "c"
 
   def dist(self, problem, one, is_obj=True):
+    if settings().is_binary:
+      return self.binary_dist(one, is_obj)
+    else:
+      return self.continuous_dist(problem, one, is_obj)
+
+  def binary_dist(self, one, is_obj=True):
+    if is_obj:
+      x, y = self.objectives, one.objectives
+    else:
+      x, y = self.decisions, one.decisions
+    return sum(x_i!=y_i for x_i, y_i in zip(x, y))
+
+  def continuous_dist(self, problem, one, is_obj=True):
     """
     Estimate normalized euclidean distance between a point and another point
     :param problem: Instance of the problem
@@ -91,6 +105,8 @@ class NodePoint(Point):
     else :
       return problem.dist(self.decisions, one.decisions,
                           is_obj = is_obj)
+
+
 
   def manhattan_dist(self, problem, one, is_obj = True):
     """
@@ -266,12 +282,11 @@ class Node(BinaryTree):
                             weighted_west,
                             mins=[o.low for o in objs],
                             maxs=[o.high for o in objs])
-        EPSILON = 1.0
+        EPSILON = 1
         if west_loss < EPSILON * east_loss:
           east_abort = True
         if east_loss < EPSILON * west_loss:
           west_abort = True
-
         self.left = Node(self.problem, afew(wests), self.total_size, parent=self, level=self.level+1, n=little_n)\
           .divide(threshold, abort=west_abort)
         self.right = Node(self.problem, afew(easts), self.total_size, parent=self, level=self.level+1, n=little_n)\

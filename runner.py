@@ -1,7 +1,7 @@
 from __future__ import print_function, division
 import sys, os, datetime
 sys.path.append(os.path.abspath("."))
-from problems.feature_models.webportal import WebPortal
+from problems.spl.web_portal import WebPortal
 from problems.feature_models.emergency_response import EmergencyResponse
 from algorithms.parallel.multi import *
 from algorithms.parallel.gale.multi_gale import GALE

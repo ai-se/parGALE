@@ -1,3 +1,4 @@
+from __future__ import print_function, division
 import sys, os
 sys.path.append(os.path.abspath("."))
 from problems.problem import *
@@ -15,8 +16,12 @@ class FeatureModel(Problem):
     self.mutate_engine = MutateEngine(self.ft)
     self.decisions = [Decision(leaf.id, 0, 1) for leaf in self.ft.leaves]
 
+  def generate(self, generator=uniform):
+    return self.mutate_engine.genValidOne()
+
 def main():
   fm = FeatureModel("problems/spl/references/web_portal.xml", "web_portal")
+  for dec in fm.decisions: print(dec.name)
   print(fm.mutate_engine.genValidOne())
 
 if __name__ == "__main__":

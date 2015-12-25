@@ -15,7 +15,7 @@ def default_settings():
   """
   return O(
     pop_size        = 50,
-    max_gens            = 160,
+    max_gens        = 20,
     allowDomination = True,
     gamma           = 0.15
   )
@@ -170,9 +170,21 @@ class GALE(Algorithm):
         total_evals += evals
 
         population, evals = self.recombine(selectees, self.settings.pop_size)
+        print(len(population))
         total_evals += evals
         gen += 1
     except RuntimeException as e:
       e.print_trace()
       return best_solutions, total_evals
     return best_solutions, total_evals
+
+
+def main():
+  from problems.spl.web_portal import WebPortal
+  wp = WebPortal()
+  algo = GALE(wp)
+  best_solutions, evals = algo.run()
+  print(evals)
+
+if __name__ == '__main__':
+  main()

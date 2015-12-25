@@ -18,9 +18,9 @@ class Consumer(multiprocessing.Process):
     self.index = index
     self.outfile = outfile
     self.initial_pop = initial_pop
-    cloned_model = model.clone()
+    #cloned_model = model.clone()
     #cloned_model.solver.add(cloned_model.region_constraints(index, total_consumers))
-    self.optimizer = optimizer(cloned_model)
+    self.optimizer = optimizer(model)
     if optimizer == GALE:
       self.optimizer.settings.max_gens = self.settings.GALE_max_gens // total_consumers
       self.optimizer.settings.pop_size = self.settings.GALE_pop_size
@@ -36,7 +36,7 @@ class Consumer(multiprocessing.Process):
   def default_settings():
     return O(
       seed = 0,
-      GALE_max_gens = 160,
+      GALE_max_gens = 20,
       GALE_pop_size = 50,
       DE_max_gens = 50,
       DE_pop_size = 160,
