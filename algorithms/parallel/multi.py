@@ -11,16 +11,19 @@ __author__ = 'panzer'
 
 
 class Consumer(multiprocessing.Process):
-  def __init__(self, optimizer, model, results, index, outfile, total_consumers, initial_pop = None, **settings):
+  def __init__(self, optimizer, model, results, index, outfile, total_consumers, feature_splits = None, initial_pop = None, **settings):
     multiprocessing.Process.__init__(self)
     self.settings = Consumer.default_settings().update(**settings)
     self.results = results
     self.index = index
     self.outfile = outfile
     self.initial_pop = initial_pop
-    #cloned_model = model.clone()
+    cloned_model = model.clone()
+    if feature_splits:
+      cloned_model.solver.add(feature_splits[index])
+      cloned_model.base_solver.add(feature_splits[index])
     #cloned_model.solver.add(cloned_model.region_constraints(index, total_consumers))
-    self.optimizer = optimizer(model)
+    self.optimizer = optimizer(cloned_model)
     if optimizer == GALE:
       self.optimizer.settings.max_gens = self.settings.GALE_max_gens // total_consumers
       self.optimizer.settings.pop_size = self.settings.GALE_pop_size

@@ -427,10 +427,15 @@ metrics_objective_direction = [METRICS_MINIMIZE, METRICS_MINIMIZE, METRICS_MINIM
 
 highs = [422, 30, 43, 145]
 lows = [0.0, 0, 0, 0]
-
+# set_option('auto_config', False)
+# set_option('smt.phase_selection',5)
+# set_option('smt.random_seed',100)
+# s.push()
 
 class WebPortal(FeatureModel):
   def __init__(self, directions=None, is_empty=False, **settings):
+    if directions is None:
+      directions = [True, True, False, False]
     FeatureModel.__init__(self, FeatureVariable, metrics_variables,
                           s, highs, lows, directions, is_empty, **settings)
     self.name = WebPortal.__name__
@@ -460,13 +465,20 @@ class WebPortal(FeatureModel):
     other = WebPortal(is_empty=True)
     return FeatureModel.clone(self, other)
 
-
-
 def _test():
+  def format_dec(dec):
+    d_form = []
+    for d in dec:
+      if d: d_form.append(1)
+      else: d_form.append(0)
+    return d_form
   portal = WebPortal()
+  constraints = portal.split_features(4)
+  portal.solver.add(constraints[0])
+  portal.base_solver.add(constraints[0])
   pop = portal.populate(5)
   for one in pop:
-    print(portal.evaluate(one))
+    print(format_dec(one), portal.evaluate(one))
 
 if __name__ == "__main__":
   _test()

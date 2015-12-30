@@ -6,6 +6,8 @@ from utils.lib import *
 from problems.problem import Problem, Decision, Objective
 from math import tan
 from utils.exceptions import RuntimeException
+from sklearn.tree import DecisionTreeRegressor as cart
+import numpy as np
 
 __author__ = 'panzer'
 
@@ -54,15 +56,22 @@ class FeatureModel(Problem):
       return sum(a!=b for a,b in zip(one, two))
 
   def generate(self, generator=uniform):
-
+    # Randomly Set a decision
+    rand_dec = choice(self.decision_vector)
+    val = choice([True, False])
+    self.solver.push()
+    self.solver.add(rand_dec == val)
     if self.solver.check() == sat:
-      self.solver.set('random_seed', 400)
+      #self.solver.set('random_seed', random.randint(0, 500))
       model = self.solver.model()
       decs = [model[dec] for dec in self.decision_vector]
+      self.solver.pop()
       self.add_to_population_constraint(decs)
       return [is_true(d) for d in decs]
     else:
-       raise RuntimeException("Unsatisfiability reached")
+      self.solver.pop()
+      return self.generate()
+      #raise RuntimeException("Unsatisfiability reached")
 
   def check_constraints(self, decisions):
     cloned = clone(self.base_solver)
@@ -111,3 +120,30 @@ class FeatureModel(Problem):
   @staticmethod
   def get_gradient(radian):
     return int(1000 * round(tan(radian), 3))
+
+  def split_features(self, consumers, obj_index=0):
+    pop = self.populate(25*consumers)
+    X, y = [],[]
+    for one in pop:
+      X.append(one)
+      y.append(self.evaluate(one)[obj_index])
+    tree = cart(max_leaf_nodes=consumers)
+    tree.fit(X, y)
+    filtered = np.asarray(X).astype(np.float32)
+    leaf_ids = tree.tree_.apply(filtered)
+    leaves = {}
+    for leaf_id,x in zip(leaf_ids, X):
+      leaves[leaf_id] = leaves.get(leaf_id, []) + [x]
+    consumer_constraints = []
+    for values in leaves.values():
+      matrix = np.matrix(values)
+      maxs = matrix.max(0).tolist()
+      mins = matrix.min(0).tolist()
+      constraints = []
+      for dec_vector, max_val, min_val in zip(self.decision_vector, maxs[0], mins[0]):
+        if not max_val:
+          constraints.append(dec_vector == False)
+        elif min_val:
+          constraints.append(dec_vector == True)
+      consumer_constraints.append(And(constraints))
+    return consumer_constraints

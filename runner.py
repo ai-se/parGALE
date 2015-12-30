@@ -1,7 +1,7 @@
 from __future__ import print_function, division
 import sys, os, datetime
 sys.path.append(os.path.abspath("."))
-from problems.spl.web_portal import WebPortal
+from problems.feature_models.webportal import WebPortal
 from problems.feature_models.emergency_response import EmergencyResponse
 from algorithms.parallel.multi import *
 from algorithms.parallel.gale.multi_gale import GALE
@@ -26,7 +26,10 @@ if __name__ == "__main__":
   num_consumers = int(str(sys.argv[4]).strip())
   manager = multiprocessing.Manager()
   results = manager.dict()
-  consumers = [Consumer(optimizer, model, results, i, outfile, num_consumers) for i in range(num_consumers)]
+  features_splits = None
+  if num_consumers > 1:
+    features_splits = model.split_features(num_consumers)
+  consumers = [Consumer(optimizer, model, results, i, outfile, num_consumers, features_splits = features_splits) for i in range(num_consumers)]
   start_time = time.time()
   for consumer in consumers:
     consumer.start()
