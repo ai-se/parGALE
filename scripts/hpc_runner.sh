@@ -1,6 +1,6 @@
 #! /bin/tcsh
 
-if [ "$#" -ne 5 ]; then
+if [ "$#" -ne 6 ]; then
   echo "Illegal number parameters"
   echo "sh hpc_benchmark.sh <model> <algo> <outfile> <splitfeatures = y/n> <min_processors> <max_processors>"
   exit 1

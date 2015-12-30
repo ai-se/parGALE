@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ "$#" -ne 5 ]; then
+if [ "$#" -ne 6 ]; then
   echo "Illegal number parameters"
   exit 1
 fi
