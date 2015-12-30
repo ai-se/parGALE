@@ -29,6 +29,7 @@ class FeatureModel(Problem):
     self.objective_vector = objective_vector
     self.solver = solver
     self.base_solver = clone(solver)
+    self.generation_counter = 0
 
   def clone(self, other):
     other.decisions = self.decisions[:]
@@ -67,11 +68,14 @@ class FeatureModel(Problem):
       decs = [model[dec] for dec in self.decision_vector]
       self.solver.pop()
       self.add_to_population_constraint(decs)
+      self.generation_counter = 0
       return [is_true(d) for d in decs]
     else:
+      self.generation_counter += 1
       self.solver.pop()
+      if self.generation_counter >= 10:
+        raise RuntimeException("Unsatisfiability reached")
       return self.generate()
-      #raise RuntimeException("Unsatisfiability reached")
 
   def check_constraints(self, decisions):
     cloned = clone(self.base_solver)
