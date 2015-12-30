@@ -19,10 +19,9 @@ class Consumer(multiprocessing.Process):
     self.outfile = outfile
     self.initial_pop = initial_pop
     cloned_model = model.clone()
-    if feature_splits:
-      cloned_model.solver.add(feature_splits[index])
-      cloned_model.base_solver.add(feature_splits[index])
-    #cloned_model.solver.add(cloned_model.region_constraints(index, total_consumers))
+    # if feature_splits:
+    #   cloned_model.solver.add(feature_splits[index])
+    #   cloned_model.base_solver.add(feature_splits[index])
     self.optimizer = optimizer(cloned_model)
     if optimizer == GALE:
       self.optimizer.settings.max_gens = self.settings.GALE_max_gens // total_consumers
