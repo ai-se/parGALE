@@ -38,6 +38,7 @@ class FeatureModel(Problem):
     other.objective_vector = self.objective_vector
     other.solver = clone(self.solver)
     other.base_solver = clone(self.base_solver)
+    other.generation_counter = self.generation_counter
     return other
 
   def dist(self, one, two, one_norm = True, two_norm = True, is_obj = True):

@@ -5,6 +5,7 @@ from __future__ import print_function, division
 import random
 import sys, os
 import math
+import numpy as np
 
 # Constants
 EPS = 0.00001
@@ -198,3 +199,12 @@ def mkdir(directory):
     os.makedirs(directory)
   return directory
 
+def mean_iqr(lst):
+  """
+  return mean and iqr of a list.
+  :param lst: List to fetch mean and iqr
+  :return: (mean, iqr)
+  """
+  mean = np.mean(lst)
+  q75, q25 = np.percentile(lst, [75, 25])
+  return mean, q75 - q25
