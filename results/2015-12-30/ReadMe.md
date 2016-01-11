@@ -31,6 +31,9 @@
 ### Speedups
 ![speedups](ers_speedups.png)
 
+### BaseLine
+![baseline](ERS_baseline.png)
+
 ## WPT Feature Model
 
 ### Runtimes
@@ -55,3 +58,6 @@
 
 ### Speedups
 ![speedups](wpt_speedups.png)
+
+### BaseLine
+![baseline](WPT_baseline.png)
