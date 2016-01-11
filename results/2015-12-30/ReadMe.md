@@ -3,6 +3,7 @@
 - For each leaf identify the range inputs within the range.
 - For each processor: randomly assign input range of one leaf.
 - Decisions will now be generated within only this input range.
+- Experiment was conducted 20 times
 
 # Results.
 ## ERS Feature Model
@@ -29,3 +30,28 @@
 
 ### Speedups
 ![speedups](ers_speedups.png)
+
+## WPT Feature Model
+
+### Runtimes
+| Processors |    GALE    | GALE FS |
+|:----------:|:-----------:|:-------------:|
+|1| 269.37 +/- 2.17 | 269.37 +/- 2.17 | 
+|2| 100.81 +/- 1.72 | 113.03 +/- 1.07 |
+|3| 65.28 +/- 1.11 | 71.86 +/- 0.91 |
+|4| 47.61 +/- 1.26 | 53.11 +/- 2.91 |
+|5| 37.63 +/- 0.47 | 42.17 +/- 1.59 |
+|6| 30.57 +/- 0.23 | 34.23 +/- 1.76 |
+|7| 25.96 +/- 0.08 | 29.50 +/- 1.14 |
+|8| 23.58 +/- 0.32 | 27.22 +/- 2.03 |
+|9| 23.96 +/- 0.49 | 23.57 +/- 2.03 |
+|10| 23.99 +/- 0.22 | 22.98 +/- 2.64 | 
+|11| 23.53 +/- 0.34 | 20.66 +/- 0.96 |
+|12| 23.85 +/- 0.29 | 19.38 +/- 1.93 |
+|13| 23.91 +/- 0.16 | 20.54 +/- 1.59 |
+|14| 23.56 +/- 0.28 | 20.49 +/- 2.53 |
+|15| 23.39 +/- 0.08 | 20.59 +/- 0.95 |
+|16| 24.94 +/- 0.26 | 22.64 +/- 3.44 |
+
+### Speedups
+![speedups](wpt_speedups.png)
