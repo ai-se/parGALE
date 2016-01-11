@@ -7,9 +7,8 @@
 # Results.
 ## ERS Feature Model
 
-## Runtimes
-
-| Processors |    Naive    | Feature Split |
+### Runtimes
+| Processors |    GALE    | GALE FS |
 |:----------:|:-----------:|:-------------:|
 |1| 250.67 +/- 23.05 | 250.67 +/- 23.05 | 
 |2| 105.15 +/- 4.60 | 100.86 +/- 1.43 |
@@ -27,3 +26,6 @@
 |14| 20.87 +/- 0.51 | 18.05 +/- 1.72 |
 |15| 20.45 +/- 0.74 | 18.29 +/- 1.65 |
 |16| 21.69 +/- 0.63 | 20.02 +/- 2.75 |
+
+### Speedups
+![speedups](ers_speedups.png)
