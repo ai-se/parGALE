@@ -9,5 +9,6 @@ class RuntimeException(Exception):
     super(RuntimeException, self).__init__(message)
     self.name = RuntimeException.__name__
 
-  def print_trace(self):
+  @staticmethod
+  def print_trace():
     traceback.print_exc()
