@@ -273,7 +273,7 @@ if __name__ == '__main__':
     #print 'Creating %d consumers' % num_consumers
     consumersList = [ Consumer(taskQueue, ParetoFront, totalTime, i, outputFileParentName, num_consumers, solvers[i], INPUT)
                     for i in xrange(num_consumers)]
-    
+    starttime = time.time()
     for w in consumersList:
         w.start()            
     
@@ -380,19 +380,18 @@ if __name__ == '__main__':
     
     runningtime = 0.0
 #     print totalTime.qsize()
-    
     while totalTime.qsize() > 0:
-        time = totalTime.get()
-        if (float(time) < runningtime):
-            runningtime = float(time)
+        ttime = totalTime.get()
+        if (float(ttime) < runningtime):
+            runningtime = float(ttime)
     
 #     print str(runningtime)
-    
+    endtime = time.time()
     outputFileParent = open(str(outputFileParentName+'.csv'), 'a')
     try:
         # keep a zero position for the same merging program as opGIA
         # in fact, here zero should be 356, as we already check it using the above code
-        outputFileParent.writelines(str(num_consumers) + ',' + str(TotalOverlappingParetoFront) +',' + '0' + ',' + str(runningtime) + ',' + '\n')
+        outputFileParent.writelines(str(num_consumers) + ',' + str(TotalOverlappingParetoFront) +',' + '0' + ',' + str(endtime - starttime) + '\n')
     finally:
         outputFileParent.close()
             
