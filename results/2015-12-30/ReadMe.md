@@ -7,6 +7,9 @@
 
 # Results.
 ## ERS Feature Model
+- 35 Features
+- 7 Objectives
+- 5184 Solutions
 
 ### Runtimes
 | Processors |    GALE    | GALE FS | ParGIA |
@@ -35,6 +38,9 @@
 ![baseline](ERS_baseline.png)
 
 ## WPT Feature Model
+- 44 Features
+- 2,120,800 Solutions
+- 4 Objectives
 
 ### Runtimes
 | Processors |    GALE    | GALE FS | ParGIA |
