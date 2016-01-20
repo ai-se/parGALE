@@ -11,6 +11,15 @@ import numpy as np
 
 __author__ = 'panzer'
 
+def compare(one, two, minimize=True):
+  if one == two:
+    return 0
+  if minimize:
+    status = 1 if one < two else -1
+  else:
+    status = 1 if one > two else -1
+  return status
+
 def clone(solver):
   cloned = Solver()
   [cloned.add(assertion) for assertion in solver.assertions()]
@@ -83,6 +92,39 @@ class FeatureModel(Problem):
     assumptions = [decision == val for decision, val in zip(self.decision_vector, decisions)]
     [cloned.add(a) for a in assumptions]
     return cloned.check() == sat
+
+  def evaluate_constraints(self, decisions):
+    return True, 0
+
+  def better(self, one, two):
+    """
+    Function that checks which of the
+    two decisions are dominant
+    :param one:
+    :param two:
+    :return:
+    """
+    obj1 = one.objectives
+    obj2 = two.objectives
+    one_at_least_once = False
+    two_at_least_once = False
+    for index, (a, b) in enumerate(zip(obj1, obj2)):
+      status = compare(a, b, self.objectives[index].to_minimize)
+      if status == -1:
+        #obj2[i] better than obj1[i]
+        two_at_least_once = True
+      elif status == 1:
+        #obj1[i] better than obj2[i]
+        one_at_least_once = True
+      if one_at_least_once and two_at_least_once:
+        #neither dominates each other
+        return 0
+    if one_at_least_once:
+      return 1
+    elif two_at_least_once:
+      return 2
+    else:
+      return 0
 
   def add_to_population_constraint(self, decisions):
     pop_constraint = []
