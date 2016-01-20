@@ -7,10 +7,11 @@ from algorithms.parallel.multi import *
 from algorithms.parallel.gale.multi_gale import GALE
 from algorithms.parallel.de.multi_de import DE
 from utils.lib import mkdir, mean_iqr
+from utils.nsga2 import select as sel_nsga2
 
 REPEATS = 5
 
-if __name__ == "__main__":
+def _multi_test():
   if str(sys.argv[1]) == "WPT":
     model = WebPortal()
   elif str(sys.argv[1]) == "ERS":
@@ -28,10 +29,10 @@ if __name__ == "__main__":
   num_consumers = int(str(sys.argv[4]).strip())
   do_feature_split = sys.argv[5]
   manager = multiprocessing.Manager()
-  results = manager.dict()
   runtimes = []
   result_count = 0
   for _ in xrange(REPEATS):
+    results = manager.dict()
     features_splits = None
     if num_consumers > 1 and do_feature_split == 'y':
       features_splits = model.split_features(num_consumers)
@@ -57,3 +58,63 @@ if __name__ == "__main__":
     )
   finally:
     outfile_main.close()
+
+
+def _single_test():
+  if str(sys.argv[1]) == "WPT":
+    model = WebPortal()
+  elif str(sys.argv[1]) == "ERS":
+    model = EmergencyResponse()
+  else:
+    assert False, "Invalid Argument"
+  if str(sys.argv[2]) == "DE":
+    optimizer = DE
+  elif str(sys.argv[2]) == "GALE":
+    optimizer = GALE
+  else:
+    assert False, "Invalid Argument"
+  new_dir = mkdir("results/"+str(datetime.date.today())+"/")
+  outfile = new_dir+str(sys.argv[3]).strip()
+  num_consumers = int(str(sys.argv[4]).strip())
+  do_feature_split = sys.argv[5]
+  manager = multiprocessing.Manager()
+  results = manager.dict()
+  features_splits = None
+  if num_consumers > 1 and do_feature_split == 'y':
+    features_splits = model.split_features(num_consumers)
+  consumers = [Consumer(optimizer, model, results, i, outfile, num_consumers, features_splits = features_splits) for i in range(num_consumers)]
+  start_time = time.time()
+  for consumer in consumers:
+    consumer.start()
+  for consumer in consumers:
+    consumer.join()
+  total_time = time.time() - start_time
+  all_results = []
+  seen = []
+  for i in range(num_consumers):
+    for result in results[i]:
+      for r in result:
+        if r.objectives not in seen:
+          all_results.append(r)
+          seen.append(r.objectives)
+  if len(all_results) > consumers[0].settings.GALE_pop_size:
+    all_results = sel_nsga2(model, all_results, consumers[0].settings.GALE_pop_size)
+  objs = [result.objectives for result in all_results]
+  write_objs(objs, outfile+"_"+str(num_consumers)+"_objs")
+  result_count = len(all_results)
+  outfile_main = open(str(outfile+'.csv'), 'a')
+  try:
+    outfile_main.writelines(
+        str(num_consumers) + ',' +
+        str(result_count) + ',' +
+        str(total_time) + '\n'
+    )
+  finally:
+    outfile_main.close()
+
+def write_objs(objs, file_name):
+  with open(file_name+'.csv', 'w') as f:
+    f.writelines(",".join(str(j) for j in i) + '\n' for i in objs)
+
+if __name__ == "__main__":
+  _single_test()

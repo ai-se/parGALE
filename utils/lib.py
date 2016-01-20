@@ -158,6 +158,10 @@ class Point(O):
       self.objectives = problem.evaluate(decisions)
     else:
       self.objectives = []
+    self.rank = 0
+    self.dominated = []
+    self.dominating = 0
+    self.crowd_dist = 0
 
   def __hash__(self):
     return hash(self.decisions)
