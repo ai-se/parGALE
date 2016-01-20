@@ -54,7 +54,7 @@ def _multi_test():
     if len(all_results) > consumers[0].settings.GALE_pop_size:
       all_results = sel_nsga2(model, all_results, consumers[0].settings.GALE_pop_size)
     objs = [result.objectives for result in all_results]
-    obj_file = mkdir(new_dir+"/repeat_"+str(rep)+"/")+str(sys.argv[3]).strip()
+    obj_file = mkdir(new_dir+"/repeat_"+str(rep)+"/")+str(sys.argv[3]).strip()+"_"+str(num_consumers)+"_objs"
     write_objs(objs, obj_file)
     runtimes.append(total_time)
     result_count += len(all_results)
