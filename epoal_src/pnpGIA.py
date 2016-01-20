@@ -23,6 +23,7 @@ INPUT: experiment outfile num_consumers
 class Consumer(multiprocessing.Process):
     def __init__(self, task_queue, result_queue, totalTime, index, outputFileParentName, num_consumers, s, INPUT):
         multiprocessing.Process.__init__(self)
+
         self.task_queue = task_queue
         self.result_queue = result_queue
 #         self.CurrentNotDomConstraints_queuelist = CurrentNotDomConstraints_queuelist
@@ -281,6 +282,10 @@ if __name__ == '__main__':
         w.join()  
         
 #         print "The number of all found Pareto Points (may overlapping) ", ParetoFront.qsize()
+    pf = []
+    while not ParetoFront.empty():
+        pf.append(ParetoFront.get())
+    # TODO - Convert PF to Point.
     TotalOverlappingParetoFront = ParetoFront.qsize()
  
 ######## Verify whether the algorithm finds all true Pareto Points? Yes    
