@@ -31,7 +31,7 @@ def _multi_test():
   manager = multiprocessing.Manager()
   runtimes = []
   result_count = 0
-  for _ in xrange(REPEATS):
+  for rep in xrange(REPEATS):
     results = manager.dict()
     features_splits = None
     if num_consumers > 1 and do_feature_split == 'y':
@@ -43,8 +43,21 @@ def _multi_test():
     for consumer in consumers:
       consumer.join()
     total_time = time.time() - start_time
+    all_results = []
+    seen = []
+    for i in range(num_consumers):
+      for result in results[i]:
+        for r in result:
+          if r.objectives not in seen:
+            all_results.append(r)
+            seen.append(r.objectives)
+    if len(all_results) > consumers[0].settings.GALE_pop_size:
+      all_results = sel_nsga2(model, all_results, consumers[0].settings.GALE_pop_size)
+    objs = [result.objectives for result in all_results]
+    obj_file = mkdir(new_dir+"/repeat_"+str(rep)+"/")+str(sys.argv[3]).strip()
+    write_objs(objs, obj_file)
     runtimes.append(total_time)
-    result_count += sum([len(results[i]) for i in range(num_consumers)])
+    result_count += len(all_results)
     print("")
   outfile_main = open(str(outfile+'.csv'), 'a')
   result_count //= REPEATS
@@ -117,4 +130,4 @@ def write_objs(objs, file_name):
     f.writelines(",".join(str(j) for j in i) + '\n' for i in objs)
 
 if __name__ == "__main__":
-  _single_test()
+  _multi_test()
