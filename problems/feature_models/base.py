@@ -194,3 +194,7 @@ class FeatureModel(Problem):
           constraints.append(dec_vector == True)
       consumer_constraints.append(And(constraints))
     return consumer_constraints
+
+  def convert_to_points(self, lst):
+    assert False
+

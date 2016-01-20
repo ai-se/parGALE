@@ -465,6 +465,26 @@ class WebPortal(FeatureModel):
     other = WebPortal(is_empty=True)
     return FeatureModel.clone(self, other)
 
+  def convert_to_points(self, lst):
+    objective_index_map = {}
+    for i, obj in enumerate(self.objective_vector):
+      objective_index_map[str(obj)] = i
+    pts = []
+    for one in lst:
+      objs =[0]*len(self.objectives)
+      decs =[0]*len(self.decisions)
+      for tup, val in one:
+        tup_str = str(tup)
+        val = eval(val)
+        if tup_str in FeatureIndexMap:
+          decs[FeatureIndexMap[tup_str]] = val
+        elif tup_str in objective_index_map:
+          objs[objective_index_map[tup_str]] = val
+      pt = Point(decs)
+      pt.objectives = objs
+      pts.append(pt)
+    return pts
+
 def _test():
   def format_dec(dec):
     d_form = []

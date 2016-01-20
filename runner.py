@@ -6,7 +6,7 @@ from problems.feature_models.emergency_response import EmergencyResponse
 from algorithms.parallel.multi import *
 from algorithms.parallel.gale.multi_gale import GALE
 from algorithms.parallel.de.multi_de import DE
-from utils.lib import mkdir, mean_iqr
+from utils.lib import mkdir, mean_iqr, write_objs
 from utils.nsga2 import select as sel_nsga2
 
 REPEATS = 5
@@ -125,9 +125,7 @@ def _single_test():
   finally:
     outfile_main.close()
 
-def write_objs(objs, file_name):
-  with open(file_name+'.csv', 'w') as f:
-    f.writelines(",".join(str(j) for j in i) + '\n' for i in objs)
+
 
 if __name__ == "__main__":
   _multi_test()

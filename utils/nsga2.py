@@ -10,6 +10,8 @@ def loo(points):
     yield one, rest
 
 def select(problem, population, k):
+  if len(population) <= k:
+    return population
   fronts = sort_non_dominated(problem, population)
   pop_next = []
   for i, front in enumerate(fronts):

@@ -462,7 +462,6 @@ s.add(searchandrescuefm==True)
 
 # s.add(1000 * total_responsetime < 1000 * total_cost)
 # s.add(1000 * total_responsetime >= 1000 * total_cost)
-
 metrics_variables = [total_batteryusage, total_cost, total_deploymenttime, \
                      total_developmenttime, total_rampuptime, \
                      total_reliability,
@@ -471,7 +470,7 @@ metrics_objective_direction = [METRICS_MINIMIZE, METRICS_MINIMIZE, \
     METRICS_MINIMIZE, METRICS_MINIMIZE, METRICS_MINIMIZE, \
     METRICS_MAXIMIZE, METRICS_MINIMIZE, ]
 
-highs = [130, 2070, 234, 99, 20, 3145, 121]
+highs = [130, 2070, 234, 99, 20.0, 3145, 121]
 lows = [0, 0, 0, 0, 17.89, 0, 0]
 default_directions = [True, True, True, True, True, False, True]
 
@@ -507,6 +506,27 @@ class EmergencyResponse(FeatureModel):
       gradient_higher = FeatureModel.get_gradient(radian_higher)
       split_rules.append(1000 * (total_responsetime - 2070) * 629 >= IntVal(gradient_higher) * (total_cost - 3145) * 414)
     return And(split_rules)
+
+  def convert_to_points(self, lst):
+    objective_index_map = {}
+    for i, obj in enumerate(self.objective_vector):
+      objective_index_map[str(obj)] = i
+    pts = []
+    for one in lst:
+      objs =[0]*len(self.objectives)
+      decs =[0]*len(self.decisions)
+      for tup, val in one:
+        tup_str = str(tup)
+        val = eval(val)
+        if tup_str in FeatureIndexMap:
+          decs[FeatureIndexMap[tup_str]] = val
+        elif tup_str in objective_index_map:
+          objs[objective_index_map[tup_str]] = val
+      pt = Point(decs)
+      pt.objectives = objs
+      pts.append(pt)
+    return pts
+
 
 def _test():
   ers = EmergencyResponse()

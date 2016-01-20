@@ -212,3 +212,7 @@ def mean_iqr(lst):
   mean = np.mean(lst)
   q75, q25 = np.percentile(lst, [75, 25])
   return mean, q75 - q25
+
+def write_objs(objs, file_name):
+  with open(file_name+'.csv', 'w') as f:
+    f.writelines(",".join(str(j) for j in i) + '\n' for i in objs)
