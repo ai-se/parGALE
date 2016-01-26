@@ -6,6 +6,9 @@ from problems.problem import Point
 from utils.nsga2 import select as sel_nsga2
 from measures.igd import igd
 from utils.lib import mean_iqr
+from matplotlib import pyplot as plt
+import numpy as np
+COLORS = ["blue", "green", "red", "cyan", "magenta", "yellow", "saddlebrown", "orange", "darkgreen"]
 
 __author__ = 'panzer'
 
@@ -57,8 +60,37 @@ def evaluate_model(model_name):
   return processors
 
 def report():
-  processor_stats = evaluate_model(MODEL)
-  # TODO plot bar charts
+  def autolabel(rect_s):
+      # attach some text labels
+      for rect in rect_s:
+          height = rect.get_height()
+          ax.text(rect.get_x() + rect.get_width()/2., 1.05*height,
+                  '%0.2f' % height,
+                  ha='center', va='bottom')
+  processors_stats = evaluate_model(MODEL)
+  width = 0.6
+  size = len(ALGOS)+1
+  ind = np.arange(start=0, step=size*width, stop=PROCESSORS*size*width, dtype=float)
+  fig, ax = plt.subplots()
+  rects = ()
+  algos = ()
+  for index, algo_name in enumerate(ALGOS):
+    means = ()
+    iqrs = ()
+    for p_i in range(1, PROCESSORS+1):
+      means += (processors_stats[p_i][algo_name]["mean"], )
+      iqrs += (processors_stats[p_i][algo_name]["iqr"], )
+    rect = ax.bar(ind + index*width, means, width, color=COLORS[index], yerr=iqrs, ecolor='black')
+    rects += (rect, )
+    algos += (algo_name, )
+  ax.set_ylabel("IGD")
+  ax.set_title("IGD")
+  ax.set_xticks(ind + len(ALGOS)*width/2)
+  ax.set_xticklabels(tuple(range(1, PROCESSORS+1)))
+  ax.legend(rects, algos)
+
+  #for rect in rects:autolabel(rect)
+  plt.savefig(FOLDER+"/igd.png")
 
 def compute_reference(model, algo_objs):
   all_objs = []
@@ -80,8 +112,5 @@ def get_model(model_name):
   else:
     assert False, "Invalid model name : %s"%model_name
 
-def _test():
-  evaluate_model(MODEL)
-
 if __name__ == "__main__":
-  _test()
+  report()
