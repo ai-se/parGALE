@@ -4,6 +4,7 @@ Standard library files and operators
 from __future__ import print_function, division
 import random
 import sys, os
+sys.path.append(os.path.abspath("."))
 import math
 import numpy as np
 
