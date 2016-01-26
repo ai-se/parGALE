@@ -5,19 +5,46 @@ from problems.feature_models import emergency_response, webportal
 from problems.problem import Point
 from utils.nsga2 import select as sel_nsga2
 from measures.igd import igd
-from utils.lib import mean_iqr
+from measures.hypervolume import HyperVolume
+from utils.lib import mean_iqr, mkdir
 from matplotlib import pyplot as plt
 import numpy as np
 COLORS = ["blue", "green", "red", "cyan", "magenta", "yellow", "saddlebrown", "orange", "darkgreen"]
 
 __author__ = 'panzer'
 
+def igd_wrapper(model, model_name, repeat, processor):
+  algo_objs = []
+  for algo in ALGOS:
+    algo_objs.append(read(model_name, algo, repeat, processor))
+  reference = compute_reference(model, algo_objs)
+  measures = []
+  for objs in algo_objs:
+    measures.append(igd(objs, reference))
+  return measures
+
+def hv_wrapper(model, model_name, repeat, processor):
+  algo_objs = []
+  for algo in ALGOS:
+    algo_objs.append(read(model_name, algo, repeat, processor))
+  all_objs = []
+  for objs in algo_objs: all_objs += objs
+  reference = HyperVolume.get_reference_point(model, all_objs)
+  hv = HyperVolume(model, reference)
+  measures = []
+  for objs in algo_objs:
+    measures.append(hv.compute(objs))
+  return measures
+
+
+
+
 FOLDER      = "results/2016-01-20"
-MODEL       = "ers"
+MODEL       = "wpt"
 ALGOS       = ["gale", "galefs", "gia"]
 REPEATS     = 5
 PROCESSORS  = 16
-MEASURE     = igd
+MEASURE     = hv_wrapper
 
 def read(model_name, algo, repeat, processor):
   file_name = FOLDER + "/repeat_" + str(repeat) + "/" + model_name + "_" + algo + "_" + str(processor) + "_objs.csv"
@@ -26,20 +53,10 @@ def read(model_name, algo, repeat, processor):
     objs = [map(float, line.strip().split(",")) for line in lines]
   return objs
 
-def compare_algos(model, model_name, repeat, processor):
-  algo_objs = []
-  for algo in ALGOS:
-    algo_objs.append(read(model_name, algo, repeat, processor))
-  reference = compute_reference(model, algo_objs)
-  measures = []
-  for objs in algo_objs:
-    measures.append(MEASURE(objs, reference))
-  return measures
-
 def compare_processor(model, model_name, processor):
   repeats = []
   for repeat in range(REPEATS):
-    repeats.append(compare_algos(model, model_name, repeat, processor))
+    repeats.append(MEASURE(model, model_name, repeat, processor))
   processor_stats = {}
   for i, algo in enumerate(ALGOS):
     algo_stats = {}
@@ -83,14 +100,16 @@ def report():
     rect = ax.bar(ind + index*width, means, width, color=COLORS[index], yerr=iqrs, ecolor='black')
     rects += (rect, )
     algos += (algo_name, )
-  ax.set_ylabel("IGD")
-  ax.set_title("IGD")
+  measure = MEASURE.__name__.split("_")[0].upper()
+  ax.set_ylabel(measure)
+  ax.set_title(measure)
   ax.set_xticks(ind + len(ALGOS)*width/2)
   ax.set_xticklabels(tuple(range(1, PROCESSORS+1)))
   ax.legend(rects, algos)
 
   #for rect in rects:autolabel(rect)
-  plt.savefig(FOLDER+"/igd.png")
+  folder = mkdir(FOLDER+"/figures/")
+  plt.savefig(folder+"%s_%s.png"%(MODEL, MEASURE.__name__.split("_")[0]))
 
 def compute_reference(model, algo_objs):
   all_objs = []
