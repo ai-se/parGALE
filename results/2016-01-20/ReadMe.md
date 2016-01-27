@@ -32,10 +32,16 @@
 |16| 21.69 +/- 0.63 | 20.02 +/- 2.75 |14.60|
 
 ### Speedups
-![speedups](ers_speedups.png)
+![speedups](figures/ers_speedups.png)
 
 ### BaseLine
-![baseline](ERS_baseline.png)
+![baseline](figures/ERS_baseline.png)
+
+### IGD
+![igd](figures/ers_igd.png)
+
+### HyperVolume
+![hv](figures/ers_hv.png)
 
 ## WPT Feature Model
 - 44 Features
@@ -63,7 +69,13 @@
 |16| 24.94 +/- 0.26 | 22.64 +/- 3.44 |3191.49|
 
 ### Speedups
-![speedups](wpt_speedups.png)
+![speedups](figures/wpt_speedups.png)
 
 ### BaseLine
-![baseline](WPT_baseline.png)
+![baseline](figures/WPT_baseline.png)
+
+### IGD
+![igd](figures/wpt_igd.png)
+
+### HyperVolume
+![hv](figures/wpt_hv.png)
